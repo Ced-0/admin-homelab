@@ -12,7 +12,7 @@ Ce site documente l’ensemble de mes déploiements, tests et projets autour de 
 
 ## 📁 Navigation principale
 
-- 💠 [Infrastructure Windows](windows/index.md)
+- 💠 [Infrastructure Windows](Windows/index.md)
 - 🐧 [Infrastructure Debian](debian/)
 - 🌐 [Infrastructure réseau & sécurité](infrastructure/)
 - 👤 [À propos de moi](about.md)
