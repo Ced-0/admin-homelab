@@ -86,5 +86,5 @@ admin-homelab/
 ---
 
 🧾 *Ce wiki est une documentation technique personnelle, créée à des fins d’apprentissage et de démonstration professionnelle.*  
-© 2025 Jean Dupont – Licence MIT
+© 2025 Cédric Ambos – Licence MIT
 
