@@ -13,7 +13,7 @@ Ce wiki me sert à la fois de :
 ## 🌐 Accès au site
 
 👉 [**Consulter le Wiki en ligne**](https://tonpseudo.github.io/mon-wiki-sysadmin/)  
-*(hébergé gratuitement avec GitHub Pages)*
+*(hébergé avec GitHub Pages)*
 
 ---
 
