@@ -45,3 +45,47 @@ admin-homelab/
 │ └── wds.md
 │
 └── _config.yml → Configuration GitHub Pages
+
+
+---
+
+## 🧰 Technologies utilisées
+
+- **Windows Server 2022**
+- **Debian 12 Bookworm**
+- **pfSense** (pare-feu et routage)
+- **PowerShell** pour l’automatisation
+- **Centreon / GLPI** pour la supervision et la gestion IT
+- **GitHub Pages + Markdown (Jekyll)** pour la documentation
+
+---
+
+## 📌 Objectifs du wiki
+
+- Créer un **guide complet d’installation et de configuration** pour chaque service
+- Centraliser les **bonnes pratiques** et les **procédures internes**
+- Faciliter le partage et la réutilisation de configurations dans d’autres environnements
+
+---
+
+## 💡 Exemple de sujets couverts
+
+- 🪟 **Active Directory** : gestion des utilisateurs, GPO, réplication  
+- 🐧 **DHCP sous Debian** : configuration, réservations, logs  
+- 🔒 **pfSense et VLAN** : segmentation réseau, règles de sécurité  
+- 🧰 **GLPI / Centreon** : inventaire et supervision  
+- ☁️ **RDS / WDS / Exchange** *(à venir)*  
+
+---
+
+## 📬 Contact
+
+📧 cedric.ambos@gmail.com  
+💼 [LinkedIn](https://linkedin.com/in/jeandupont)  
+🐙 [GitHub](https://github.com/tonpseudo)
+
+---
+
+🧾 *Ce wiki est une documentation technique personnelle, créée à des fins d’apprentissage et de démonstration professionnelle.*  
+© 2025 Jean Dupont – Licence MIT
+
