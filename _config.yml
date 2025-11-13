@@ -1,0 +1,4 @@
+theme: jekyll-theme-cayman
+title: "Wiki SysAdmin – Cédric Ambos"
+description: "Documentation d’infrastructure Windows / Linux / Réseau"
+markdown: kramdown
