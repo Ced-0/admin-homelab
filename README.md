@@ -12,7 +12,7 @@ Ce wiki me sert à la fois de :
 
 ## 🌐 Accès au site
 
-👉 [**Consulter le Wiki en ligne**](https://tonpseudo.github.io/mon-wiki-sysadmin/)  
+👉 [**Consulter le Wiki en ligne**](https://ced-0.github.io/admin-homelab/)  
 *(hébergé avec GitHub Pages)*
 
 ---
