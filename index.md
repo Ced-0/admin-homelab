@@ -1,4 +1,4 @@
-# 🌐 Wiki SysAdmin – Ambos Cédric
+# 🌐 Wiki SysAdmin – Cédric Ambos
 
 Bienvenue sur mon **wiki technique** consacré à l’administration systèmes et réseaux.  
 Ce site documente l’ensemble de mes déploiements, tests et projets autour de :
