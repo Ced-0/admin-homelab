@@ -18,7 +18,7 @@ Ce wiki me sert à la fois de :
 ---
 
 ## 🧱 Structure du projet
-
+```
 admin-homelab/
 ├── index.md → Page d’accueil du site
 ├── about.md → Profil / contact
@@ -45,8 +45,7 @@ admin-homelab/
 │ └── wds.md
 │
 └── _config.yml → Configuration GitHub Pages
-
-
+```
 ---
 
 ## 🧰 Technologies utilisées
