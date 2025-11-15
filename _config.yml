@@ -6,8 +6,7 @@ remote_theme: "pmarsceill/just-the-docs"
 # Navigation / Sidebar
 nav:
   - title: Accueil
-    url: /
-    
+    url: /    
  - title: Introduction
     items:
       - title: AD
@@ -21,8 +20,7 @@ nav:
       - title: Print Server
         url: /introduction/printserver/
       - title: Collaboration
-        url: /introduction/collaboration/
-  
+        url: /introduction/collaboration/  
   - title: Windows
     items:
       - title: Introduction
@@ -30,15 +28,13 @@ nav:
       - title: AD DS
         url: /windows/ad-ds/
       - title: DNS
-        url: /windows/dns/
-        
+        url: /windows/dns/        
   - title: Debian
     items:
       - title: Introduction
         url: /debian/
       - title: DNS
-        url: /debian/dns/
-        
+        url: /debian/dns/        
   - title: Infrastructure
     items:
       - title: Vue d'ensemble
