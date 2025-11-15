@@ -1,7 +1,6 @@
 ---
 title: Introduction
 permalink: /introduction/
-weight: 2
 ---
 
 # Introduction au Homelab
