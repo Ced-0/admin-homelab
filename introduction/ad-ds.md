@@ -2,7 +2,6 @@
 title: "AD DS - Introduction"
 description: "Guide sur Active Directory Domain Services"
 permalink: /introduction/ad-ds/
-weight: 1
 ---
 
 # Active Directory Domain Services (AD DS)
