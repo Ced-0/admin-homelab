@@ -1,7 +1,7 @@
 ---
 title: "Accueil"
 sidebar:
-  nav: "navigation"   # <-- ceci active la sidebar
+  nav: "navigation"
 permalink: /
 ---
 
