@@ -1,3 +1,9 @@
+---
+title: "Amin Homelab"
+layout: single
+permalink: /
+---
+
 # 🧠 Wiki SysAdmin – Cédric Ambos
 
 Bienvenue sur mon **Wiki d’administration systèmes et réseaux**.  
