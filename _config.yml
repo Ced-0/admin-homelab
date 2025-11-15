@@ -10,30 +10,26 @@ nav:
 
   - title: Introduction
     items:
-      - title: AD
+      - title: Introduction AD DS
         url: /introduction/ad/
-      - title: DNS
+      - title: Introduction DNS
         url: /introduction/dns/
-      - title: DHCP
+      - title: Introduction DHCP
         url: /introduction/dhcp/
-      - title: File Server
+      - title: Introduction serveur de fichier
         url: /introduction/fileserver/
-      - title: Print Server
+      - title: Introduction serveur d'impression
         url: /introduction/printserver/
-      - title: Collaboration
-        url: /introduction/collaboration/
 
   - title: Windows
     items:
       - title: AD DS
         url: /windows/ad-ds/
-      - title: DNS
+      - title: DNS sur Windows server
         url: /windows/dns/        
 
   - title: Debian
     items:
-      - title: Introduction
-        url: /debian/
       - title: DNS
         url: /debian/dns/        
 
