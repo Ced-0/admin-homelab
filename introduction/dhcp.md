@@ -2,7 +2,6 @@
 title: "DHCP - Introduction"
 description: "Guide DHCP sur Active Directory Domain Services"
 permalink: /introduction/dhcp/
-weight: 3
 ---
 
 # DHCP sur Windows Server
