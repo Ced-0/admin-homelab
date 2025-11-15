@@ -1,8 +1,9 @@
 ---
-title: "DNS - Introduction"
-description: "Guide DNS en environnement Windows et Active Directory"
-permalink: /introduction/dns/
+title: DNS
+parent: Introduction
+nav_order: 2
 ---
+
 
 # DNS sur Windows Server
 
