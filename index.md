@@ -1,9 +1,3 @@
----
-title: "Accueil"                 # Titre affiché en haut de la page et dans le fil d’ariane
-description: "Page d'accueil"    # Pour SEO et partage
-permalink: /                     # URL publique de la page
----
-
 # 🧠 Wiki SysAdmin – Cédric Ambos
 
 ---
