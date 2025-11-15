@@ -1,5 +1,7 @@
 # À propos
 
+---
+
 🎓 **Administrateur Systèmes Junior**  
 💼 Passionné par la virtualisation, l’automatisation et la sécurité.
 
