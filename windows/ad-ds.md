@@ -1,3 +1,9 @@
+---
+title: "AD DS"
+description: "Guide sur Active Directory Domain Services"
+permalink: /windows/ad-ds/
+---
+
 # Active Directory Domain Services (AD DS)
 
 ## 🎯 Objectif de la page
