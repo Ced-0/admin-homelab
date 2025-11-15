@@ -23,21 +23,15 @@ nav:
         url: /introduction/collaboration/  
   - title: Windows
     items:
-      - title: Introduction
-        url: /windows/
       - title: AD DS
         url: /windows/ad-ds/
       - title: DNS
         url: /windows/dns/        
   - title: Debian
-    items:
-      - title: Introduction
         url: /debian/
       - title: DNS
         url: /debian/dns/        
   - title: Infrastructure
     items:
-      - title: Vue d'ensemble
-        url: /infrastructure/
       - title: pfSense
         url: /infrastructure/pfsense/
