@@ -1,8 +1,7 @@
 ---
-title: "Accueil"
-layout: single
-sidebar:
-  nav: "main"
+title: "Mon Wiki SysAdmin"
+layout: splash
+permalink: /
 ---
 
 Bienvenue sur mon **Wiki d’administration systèmes et réseaux**.  
