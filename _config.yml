@@ -1,27 +1,83 @@
-title: "# 🧠 Wiki SysAdmin Junior – Cédric Ambos"
-description: "Documentation d’infrastructure Windows / Linux / Réseau"
-remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "default"
+title: "Mon Wiki SysAdmin"
+email: "cedric.ambos@gmail.com"
+description: "Documentation Windows, Debian et Infrastructure"
+baseurl: ""
+url: "https://ced-0.github.io/admin-homelab"
+theme: minimal-mistakes-jekyll
+
+markdown: kramdown
+highlighter: rouge
 
 plugins:
   - jekyll-include-cache
 
-# Sidebar automatique
+# Activer la sidebar
 defaults:
   - scope:
       path: ""
-      type: "pages"
     values:
       layout: single
       sidebar:
-        nav: "main"
+        nav: "wiki"
 
-# Définition du menu
-nav:
-  main:
+# Recherche interne (lunr.js)
+search: true
+
+# Réglages thème
+minimal_mistakes_skin: "default"
+
+# Navigation sidebar
+navigation:
+  wiki:
     - title: "Accueil"
       url: /
-    - title: "Page 1"
-      url: /page1/
-    - title: "Page 2"
-      url: /page2/
+    - title: "À propos"
+      url: /about/
+
+    - title: "Windows Server"
+      children:
+        - title: "Introduction"
+          url: /windows/
+        - title: "Active Directory"
+          url: /windows/ad-ds/
+        - title: "DNS"
+          url: /windows/dns/
+        - title: "DHCP"
+          url: /windows/dhcp/
+        - title: "Serveur de fichiers"
+          url: /windows/filesrv/
+        - title: "Serveur d'impression"
+          url: /windows/printsrv/
+        - title: "Collaboration"
+          url: /windows/collaboration/
+
+    - title: "Debian"
+      children:
+        - title: "Introduction"
+          url: /debian/
+        - title: "DNS"
+          url: /debian/dns/
+        - title: "DHCP"
+          url: /debian/dhcp/
+        - title: "Impression"
+          url: /debian/print/
+
+    - title: "Infrastructure"
+      children:
+        - title: "Vue d'ensemble"
+          url: /infrastructure/
+        - title: "pfSense"
+          url: /infrastructure/pfsense/
+        - title: "VLAN & Segmentation"
+          url: /infrastructure/vlan-segmentation/
+        - title: "GLPI"
+          url: /infrastructure/glpi/
+        - title: "Supervision"
+          url: /infrastructure/supervision/
+        - title: "RDS"
+          url: /infrastructure/rds/
+        - title: "WDS"
+          url: /infrastructure/wds/
+
+# GitHub Pages
+repository: "ced-0/admin-homelab"
