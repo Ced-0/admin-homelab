@@ -1,6 +1,6 @@
 ---
 title: Accueil
-description: Landing page
+description: "Landing page"
 permalink: /
 ---
 
