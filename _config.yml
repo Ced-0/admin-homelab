@@ -1,24 +1,29 @@
-title: "🧠 Wiki SysAdmin – Cédric Ambos"
-description: "Portfolio & Wiki Homelab"
-remote-theme: "mmistake/minimal-mistakes-jekyll"
+# _config.yml
 
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-search
+title: "Mon Wiki Homelab"
+remote_theme: "pmarsceill/just-the-docs"
 
-# Layout par défaut pour toutes les pages
-defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: default
-      sidebar:
-        nav: "navigation"
-
-# Activer la recherche
-search:
-  enabled: true
-  search_path: "/"                  
-  search_input_placeholder: "Rechercher dans le wiki..."
+# Navigation / Sidebar
+nav:
+  - title: Accueil
+    url: /
+  - title: Windows
+    items:
+      - title: Introduction
+        url: /windows/
+      - title: AD DS
+        url: /windows/ad-ds/
+      - title: DNS
+        url: /windows/dns/
+  - title: Debian
+    items:
+      - title: Introduction
+        url: /debian/
+      - title: DNS
+        url: /debian/dns/
+  - title: Infrastructure
+    items:
+      - title: Vue d'ensemble
+        url: /infrastructure/
+      - title: pfSense
+        url: /infrastructure/pfsense/
