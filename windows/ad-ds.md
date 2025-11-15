@@ -1,9 +1,6 @@
 ---
-title: "Page 1"
-layout: single
-sidebar:
-  nav: "main"
-permalink: /page1/
+title: "Active Directory"
+permalink: /windows/ad-ds/
 ---
 
 # Active Directory Domain Services (AD DS)
