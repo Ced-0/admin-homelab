@@ -1,5 +1,22 @@
-theme: jekyll-theme-cayman
-title: "Wiki SysAdmin – Cédric Ambos"
-description: "Documentation d’infrastructure Windows / Linux / Réseau"
-markdown: kramdown
+title: "Amin Homelab"
+description: "Portfolio & Wiki Homelab"
+remote-theme: "mminimal-mistakes-jekyll"
 
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-search
+
+# Layout par défaut pour toutes les pages
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "single"
+
+# Activer la recherche
+search:
+  enabled: true
+  search_path: "/"                  
+  search_input_placeholder: "Rechercher dans le wiki..."
