@@ -13,7 +13,7 @@ defaults:
       path: ""
       type: "pages"
     values:
-      layout: single
+      layout: default
       sidebar:
         nav: "navigation"
 
