@@ -3,6 +3,7 @@ title: "Accueil"                 # Titre affiché en haut de la page et dans le 
 description: "Page d'accueil"    # Pour SEO et partage
 permalink: /                     # URL publique de la page
 ---
+# 🧠 Wiki SysAdmin – Cédric Ambos
 
 Bienvenue sur mon **Wiki d’administration systèmes et réseaux**.  
 Ce projet documente mes déploiements, mes expérimentations et mes connaissances autour des environnements **Windows Server**, **Debian**, et **infrastructures réseau**.
