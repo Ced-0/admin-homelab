@@ -11,7 +11,7 @@ Vous trouverez ici un aperçu des services et concepts de base de votre homelab.
 
 ## Sommaire des services
 
-- [Active Directory](ad/)
+- [Active Directory](ad-ds/)
 - [DNS](dns/)
 - [DHCP](dhcp/)
 - [File Server](fileserver/)
