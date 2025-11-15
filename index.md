@@ -1,8 +1,4 @@
----
-title: "Mon Wiki SysAdmin"
-layout: splash
-permalink: /
----
+# 🧠 Wiki SysAdmin – Cédric Ambos
 
 Bienvenue sur mon **Wiki d’administration systèmes et réseaux**.  
 Ce projet documente mes déploiements, mes expérimentations et mes connaissances autour des environnements **Windows Server**, **Debian**, et **infrastructures réseau**.
