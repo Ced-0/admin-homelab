@@ -1,7 +1,9 @@
 ---
 title: Introduction
-permalink: /introduction/
+nav_order: 2
+has_children: true
 ---
+
 
 # Introduction au Homelab
 
