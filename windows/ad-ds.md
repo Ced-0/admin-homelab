@@ -1,7 +1,5 @@
 ---
 title: "AD DS"
-sidebar:
-  nav: "navigation"
 permalink: /windows/ad-ds/
 ---
 
