@@ -1,8 +1,8 @@
 ---
 title: Accueil
-description: "Landing page"
-permalink: /
+nav_order: 1
 ---
+
 
 # 🧠 Wiki SysAdmin – Cédric Ambos
 
