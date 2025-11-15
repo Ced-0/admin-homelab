@@ -37,6 +37,7 @@ Exemple :
 - **Reverse Lookup Zone**
 
 ### **Types d’enregistrements courants**
+```
 | Type | Utilité |
 |------|---------|
 | **A** | Associe un nom → adresse IPv4 |
@@ -45,7 +46,7 @@ Exemple :
 | **MX** | Serveur de messagerie |
 | **SRV** | Service AD : LDAP, Kerberos |
 | **PTR** | Résolution inversée (IP → nom) |
-
+```
 ---
 
 ## 🏗️ Installation du rôle DNS (si non installé)
