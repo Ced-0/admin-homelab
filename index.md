@@ -1,6 +1,8 @@
 ---
-title: "Amin Homelab"
+title: "Accueil"
 layout: single
+sidebar:
+  nav: "navigation"   # <-- ceci active la sidebar
 permalink: /
 ---
 
