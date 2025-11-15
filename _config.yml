@@ -3,7 +3,7 @@ email: "cedric.ambos@gmail.com"
 description: "Documentation Windows, Debian et Infrastructure"
 baseurl: ""
 url: "https://ced-0.github.io/admin-homelab"
-theme: minimal-mistakes-jekyll
+theme: mminimal-mistakes-jekyll
 
 markdown: kramdown
 highlighter: rouge
