@@ -1,3 +1,11 @@
+---
+title: "Page 1"
+layout: single
+sidebar:
+  nav: "main"
+permalink: /page1/
+---
+
 # Active Directory Domain Services (AD DS)
 
 ## 🎯 Objectif de la page
