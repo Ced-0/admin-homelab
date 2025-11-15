@@ -2,7 +2,6 @@
 title: "DNS - Introduction"
 description: "Guide DNS en environnement Windows et Active Directory"
 permalink: /introduction/dns/
-weight: 2
 ---
 
 # DNS sur Windows Server
