@@ -1,0 +1,46 @@
+- title: Accueil
+  url: /index.html
+- title: À propos
+  url: /about.html
+- title: Windows
+  children:
+    - title: Introduction
+      url: /windows/index.html
+    - title: AD DS
+      url: /windows/ad-ds.html
+    - title: DNS
+      url: /windows/dns.html
+    - title: DHCP
+      url: /windows/dhcp.html
+    - title: File Server
+      url: /windows/filesrv.html
+    - title: Print Server
+      url: /windows/printsrv.html
+    - title: Collaboration
+      url: /windows/collaboration.html
+- title: Debian
+  children:
+    - title: Introduction
+      url: /debian/index.html
+    - title: DNS
+      url: /debian/dns.html
+    - title: DHCP
+      url: /debian/dhcp.html
+    - title: Print
+      url: /debian/print.html
+- title: Infrastructure
+  children:
+    - title: Vue d'ensemble
+      url: /infrastructure/index.html
+    - title: pfSense
+      url: /infrastructure/pfsense.html
+    - title: VLAN / Segmentation
+      url: /infrastructure/vlan-segmentation.html
+    - title: GLPI
+      url: /infrastructure/glpi.html
+    - title: Supervision
+      url: /infrastructure/supervision.html
+    - title: RDS
+      url: /infrastructure/rds.html
+    - title: WDS
+      url: /infrastructure/wds.html
