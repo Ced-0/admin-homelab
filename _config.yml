@@ -6,41 +6,95 @@ remote_theme: "pmarsceill/just-the-docs"
 # Navigation / Sidebar
 nav:
   - title: Accueil
-    url: /    
+    url: /
+    weight: 1
 
   - title: Introduction
+    weight: 2
     items:
-      - title: Introduction AD DS
+      - title: AD
         url: /introduction/ad/
-      - title: Introduction DNS
+        weight: 1
+      - title: DNS
         url: /introduction/dns/
-      - title: Introduction DHCP
+        weight: 2
+      - title: DHCP
         url: /introduction/dhcp/
-      - title: Introduction serveur de fichier
+        weight: 3
+      - title: File Server
         url: /introduction/fileserver/
-      - title: Introduction serveur d'impression
+        weight: 4
+      - title: Print Server
         url: /introduction/printserver/
+        weight: 5
+      - title: Collaboration
+        url: /introduction/collaboration/
+        weight: 6
 
   - title: Windows
+    weight: 3
     items:
+      - title: Introduction
+        url: /windows/
+        weight: 1
       - title: AD DS
         url: /windows/ad-ds/
-      - title: DNS sur Windows server
+        weight: 2
+      - title: DNS
         url: /windows/dns/
-      - title: DHCP sur Windows server
+        weight: 3
+      - title: DHCP
         url: /windows/dhcp/
-      - title: Serveur de fichier sur Windows server
-        url: /windows/filesrv/ 
-      - title: Serveur d'impression sur Windows server
-        url: /windows/printsrv/ 
+        weight: 4
+      - title: File Server
+        url: /windows/filesrv/
+        weight: 5
+      - title: Print Server
+        url: /windows/printsrv/
+        weight: 6
+      - title: Collaboration
+        url: /windows/collaboration/
+        weight: 7
 
   - title: Debian
+    weight: 4
     items:
+      - title: Introduction
+        url: /debian/
+        weight: 1
       - title: DNS
-        url: /debian/dns/        
+        url: /debian/dns/
+        weight: 2
+      - title: DHCP
+        url: /debian/dhcp/
+        weight: 3
+      - title: Print
+        url: /debian/print/
+        weight: 4
 
   - title: Infrastructure
+    weight: 5
     items:
+      - title: Vue d'ensemble
+        url: /infrastructure/
+        weight: 1
       - title: pfSense
         url: /infrastructure/pfsense/
+        weight: 2
+      - title: VLAN / Segmentation
+        url: /infrastructure/vlan-segmentation/
+        weight: 3
+      - title: GLPI
+        url: /infrastructure/glpi/
+        weight: 4
+      - title: Supervision
+        url: /infrastructure/supervision/
+        weight: 5
+      - title: RDS
+        url: /infrastructure/rds/
+        weight: 6
+      - title: WDS
+        url: /infrastructure/wds/
+        weight: 7
+
 
