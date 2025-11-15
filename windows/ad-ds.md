@@ -1,8 +1,3 @@
----
-title: "AD DS"
-permalink: /windows/ad-ds/
----
-
 # Active Directory Domain Services (AD DS)
 
 ## 🎯 Objectif de la page
