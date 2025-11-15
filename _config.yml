@@ -14,7 +14,7 @@ nav:
     weight: 2
     items:
       - title: AD
-        url: /introduction/ad/
+        url: /introduction/ad-ds/
         weight: 1
       - title: DNS
         url: /introduction/dns/
