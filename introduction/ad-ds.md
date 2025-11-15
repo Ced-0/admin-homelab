@@ -1,8 +1,9 @@
 ---
-title: "AD DS - Introduction"
-description: "Guide sur Active Directory Domain Services"
-permalink: /introduction/ad-ds/
+title: AD
+parent: Introduction
+nav_order: 1
 ---
+
 
 # Active Directory Domain Services (AD DS)
 
