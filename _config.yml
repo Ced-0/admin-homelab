@@ -1,4 +1,27 @@
-theme: jekyll-theme-cayman
 title: "Wiki SysAdmin – Cédric Ambos"
 description: "Documentation d’infrastructure Windows / Linux / Réseau"
-markdown: kramdown
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "default"
+
+plugins:
+  - jekyll-include-cache
+
+# Sidebar automatique
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: single
+      sidebar:
+        nav: "main"
+
+# Définition du menu
+nav:
+  main:
+    - title: "Accueil"
+      url: /
+    - title: "Page 1"
+      url: /page1/
+    - title: "Page 2"
+      url: /page2/
