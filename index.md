@@ -1,7 +1,5 @@
 ---
 title: "Accueil"
-sidebar:
-  nav: "navigation"
 permalink: /
 ---
 
