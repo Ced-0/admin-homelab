@@ -1,72 +1,9 @@
-# _config.yml
-
 title: "Mon Wiki Homelab"
 remote_theme: "pmarsceill/just-the-docs"
 
-# Navigation / Sidebar
-nav:
-  - title: Accueil
-    url: /
-    
-  - title: Introduction
-    url: /introduction/
-    items:
-      - title: AD
-        url: /introduction/ad-ds/
-      - title: DNS
-        url: /introduction/dns/
-      - title: DHCP
-        url: /introduction/dhcp/
-      - title: File Server
-        url: /introduction/fileserver/
-      - title: Print Server
-        url: /introduction/printserver/
-      - title: Collaboration
-        url: /introduction/collaboration/
+# Permet les chemins simples (ex: /windows/)
+permalink: pretty
 
-  - title: Windows
-    items:
-      - title: Introduction
-        url: /windows/
-      - title: AD DS
-        url: /windows/ad-ds/
-      - title: DNS
-        url: /windows/dns/
-      - title: DHCP
-        url: /windows/dhcp/
-      - title: File Server
-        url: /windows/filesrv/
-      - title: Print Server
-        url: /windows/printsrv/
-      - title: Collaboration
-        url: /windows/collaboration/
-
-  - title: Debian
-    items:
-      - title: Introduction
-        url: /debian/
-      - title: DNS
-        url: /debian/dns/
-      - title: DHCP
-        url: /debian/dhcp/
-      - title: Print
-        url: /debian/print/
-
-  - title: Infrastructure
-    items:
-      - title: Vue d'ensemble
-        url: /infrastructure/
-      - title: pfSense
-        url: /infrastructure/pfsense/
-      - title: VLAN / Segmentation
-        url: /infrastructure/vlan-segmentation/
-      - title: GLPI
-        url: /infrastructure/glpi/
-      - title: Supervision
-        url: /infrastructure/supervision/
-      - title: RDS
-        url: /infrastructure/rds/
-      - title: WDS
-        url: /infrastructure/wds/
-
-
+# Active la recherche
+just_the_docs:
+  search_enabled: true
