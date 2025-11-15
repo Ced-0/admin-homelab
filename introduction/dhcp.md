@@ -1,8 +1,9 @@
 ---
-title: "DHCP - Introduction"
-description: "Guide DHCP sur Active Directory Domain Services"
-permalink: /introduction/dhcp/
+title: DHCP
+parent: Introduction
+nav_order: 3
 ---
+
 
 # DHCP sur Windows Server
 
