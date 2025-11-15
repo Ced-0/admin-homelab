@@ -1,3 +1,10 @@
+---
+title: "Accueil"
+layout: single
+sidebar:
+  nav: "main"
+---
+
 Bienvenue sur mon **Wiki d’administration systèmes et réseaux**.  
 Ce projet documente mes déploiements, mes expérimentations et mes connaissances autour des environnements **Windows Server**, **Debian**, et **infrastructures réseau**.
 
