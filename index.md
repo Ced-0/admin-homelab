@@ -1,3 +1,9 @@
+---
+title: Accueil
+description: Landing page
+permalink: /
+---
+
 # 🧠 Wiki SysAdmin – Cédric Ambos
 
 ---
