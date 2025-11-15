@@ -26,7 +26,13 @@ nav:
       - title: AD DS
         url: /windows/ad-ds/
       - title: DNS sur Windows server
-        url: /windows/dns/        
+        url: /windows/dns/
+      - title: DHCP sur Windows server
+        url: /windows/dhcp/
+      - title: Serveur de fichier sur Windows server
+        url: /windows/filesrv/ 
+      - title: Serveur d'impression sur Windows server
+        url: /windows/printsrv/ 
 
   - title: Debian
     items:
