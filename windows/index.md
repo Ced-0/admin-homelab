@@ -1,6 +1,6 @@
 ## 🧭 Navigation
 
-  - [Active Directory](windows/ad-ds.md)
+  - [Active Directory](./ad-ds.md)
   - [DNS](windows/dns.md)
   - [DHCP](windows/dhcp.md)
   - [Serveur de fichier](windows/fileserver.md)
