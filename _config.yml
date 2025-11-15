@@ -1,17 +1,26 @@
 title: "Mon Wiki SysAdmin"
 email: "cedric.ambos@gmail.com"
-description: "Documentation Windows, Debian et Infrastructure"
-baseurl: ""
+description: "Documentation SysAdmin Windows, Linux et Infrastructure"
 url: "https://ced-0.github.io/admin-homelab"
-remote_theme: "mmistakes/minimal-mistakes"
+baseurl: "/admin-homelab"
+
+remote_theme: mminimal-mistakes-jekyll
+minimal_mistakes_skin: "default"
 
 markdown: kramdown
 highlighter: rouge
 
 plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
   - jekyll-include-cache
+  - jekyll-redirect-from
 
-# Activer la sidebar
+# Barre de recherche
+search: true
+
+# Affichage global
 defaults:
   - scope:
       path: ""
@@ -19,12 +28,6 @@ defaults:
       layout: single
       sidebar:
         nav: "wiki"
-
-# Recherche interne (lunr.js)
-search: true
-
-# Réglages thème
-minimal_mistakes_skin: "default"
 
 # Navigation sidebar
 navigation:
@@ -79,5 +82,6 @@ navigation:
         - title: "WDS"
           url: /infrastructure/wds/
 
-# GitHub Pages
-repository: "ced-0/admin-homelab"
+# GitHub
+repository: "TON-USER/mon-wiki-sysadmin"
+
