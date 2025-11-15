@@ -1,3 +1,9 @@
+---
+title: "DNS"
+description: "Guide DNS en environnement Windows et Active Directory"
+permalink: /windows/dns/
+---
+
 # DNS sur Windows Server
 
 ## 🎯 Objectif de la page
