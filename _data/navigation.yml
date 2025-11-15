@@ -1,46 +1,47 @@
 - title: Accueil
-  url: /index.html
+  url: /
 - title: À propos
-  url: /about.html
+  url: /about/
 - title: Windows
   children:
     - title: Introduction
-      url: /windows/index.html
+      url: /windows/
     - title: AD DS
-      url: /windows/ad-ds.html
+      url: /windows/ad-ds/
     - title: DNS
-      url: /windows/dns.html
+      url: /windows/dns/
     - title: DHCP
-      url: /windows/dhcp.html
+      url: /windows/dhcp/
     - title: File Server
-      url: /windows/filesrv.html
+      url: /windows/filesrv/
     - title: Print Server
-      url: /windows/printsrv.html
+      url: /windows/printsrv/
     - title: Collaboration
-      url: /windows/collaboration.html
+      url: /windows/collaboration/
 - title: Debian
   children:
     - title: Introduction
-      url: /debian/index.html
+      url: /debian/
     - title: DNS
-      url: /debian/dns.html
+      url: /debian/dns/
     - title: DHCP
-      url: /debian/dhcp.html
+      url: /debian/dhcp/
     - title: Print
-      url: /debian/print.html
+      url: /debian/print/
 - title: Infrastructure
   children:
     - title: Vue d'ensemble
-      url: /infrastructure/index.html
+      url: /infrastructure/
     - title: pfSense
-      url: /infrastructure/pfsense.html
+      url: /infrastructure/pfsense/
     - title: VLAN / Segmentation
-      url: /infrastructure/vlan-segmentation.html
+      url: /infrastructure/vlan-segmentation/
     - title: GLPI
-      url: /infrastructure/glpi.html
+      url: /infrastructure/glpi/
     - title: Supervision
-      url: /infrastructure/supervision.html
+      url: /infrastructure/supervision/
     - title: RDS
-      url: /infrastructure/rds.html
+      url: /infrastructure/rds/
     - title: WDS
-      url: /infrastructure/wds.html
+      url: /infrastructure/wds/
+
