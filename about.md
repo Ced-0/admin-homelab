@@ -21,6 +21,6 @@ ENI Ecole Informatique
 ---
 
 ## 📬 Contact
-📧 jean.dupont@example.com  
-💼 [LinkedIn](https://linkedin.com/in/jeandupont)  
-🐙 [GitHub](https://github.com/tonpseudo)
+📧 cedric.ambos@gmail.com  
+💼 [LinkedIn](https://linkedin.com/in/cedric-ambos)  
+🐙 [GitHub](https://github.com/Ced-0)
