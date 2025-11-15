@@ -1,6 +1,6 @@
 title: "🧠 Wiki SysAdmin – Cédric Ambos"
 description: "Portfolio & Wiki Homelab"
-theme: "minimal-mistakes-jekyll"
+theme: "mminimal-mistakes-jekyll"
 
 plugins:
   - jekyll-feed
