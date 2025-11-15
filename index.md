@@ -1,6 +1,6 @@
 ---
 title: "Accueil"
-layout: single
+layout: home
 sidebar:
   nav: "navigation"   # <-- ceci active la sidebar
 permalink: /
