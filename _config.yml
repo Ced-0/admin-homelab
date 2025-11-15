@@ -12,7 +12,9 @@ defaults:
       path: ""
       type: "pages"
     values:
-      layout: "single"
+      layout: single
+      sidebar:
+        nav: "navigation"
 
 # Activer la recherche
 search:
