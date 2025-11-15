@@ -7,7 +7,8 @@ remote_theme: "pmarsceill/just-the-docs"
 nav:
   - title: Accueil
     url: /    
- - title: Introduction
+
+  - title: Introduction
     items:
       - title: AD
         url: /introduction/ad/
@@ -20,18 +21,24 @@ nav:
       - title: Print Server
         url: /introduction/printserver/
       - title: Collaboration
-        url: /introduction/collaboration/  
+        url: /introduction/collaboration/
+
   - title: Windows
     items:
       - title: AD DS
         url: /windows/ad-ds/
       - title: DNS
         url: /windows/dns/        
+
   - title: Debian
+    items:
+      - title: Introduction
         url: /debian/
       - title: DNS
         url: /debian/dns/        
+
   - title: Infrastructure
     items:
       - title: pfSense
         url: /infrastructure/pfsense/
+
