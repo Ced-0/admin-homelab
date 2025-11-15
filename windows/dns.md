@@ -37,16 +37,16 @@ Exemple :
 - **Reverse Lookup Zone**
 
 ### **Types d’enregistrements courants**
-```
-| Type | Utilité |
-|------|---------|
-| **A** | Associe un nom → adresse IPv4 |
-| **AAAA** | Nom → adresse IPv6 |
-| **CNAME** | Alias (redirection interne) |
-| **MX** | Serveur de messagerie |
-| **SRV** | Service AD : LDAP, Kerberos |
-| **PTR** | Résolution inversée (IP → nom) |
-```
+
+| Type     | Utilité                                        |
+|:--------:|:-----------------------------------------------|
+| **A**    | Associe un nom → adresse IPv4                  |
+| **AAAA** | Associe un nom → adresse IPv6                  |
+| **CNAME**| Alias (redirection interne)                    |
+| **MX**   | Détermine le serveur de messagerie             |
+| **SRV**  | Service AD : LDAP, Kerberos                    |
+| **PTR**  | Résolution inversée (IP → nom)                 |
+
 ---
 
 ## 🏗️ Installation du rôle DNS (si non installé)
