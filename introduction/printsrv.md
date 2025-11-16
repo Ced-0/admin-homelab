@@ -4,7 +4,7 @@ parent: Introduction
 nav_order: 5
 ---
 
-# Introduction au Serveur d’Impression (Print Server)
+# Introduction au Serveur d’Impression
 
 ---
 
@@ -40,7 +40,7 @@ Le Print Server sous Windows permet :
 
 # 🧱 Concepts clés du serveur d’impression
 
-### 📌 Files d’impression (Print Queue)
+### 📌 Files d’impression 
 Chaque imprimante partagée possède une **file d’attente** dans laquelle sont stockés les travaux d’impression avant leur envoi.
 
 Infos gérées par le serveur :
@@ -49,7 +49,7 @@ Infos gérées par le serveur :
 - priorité des impressions,
 - gestion des incidents (papier, toner…).
 
-### 📌 Pilotes d’impression (Print Drivers)
+### 📌 Pilotes d’impression
 Les pilotes installés sur le serveur sont automatiquement propagés aux clients.
 
 Types :
