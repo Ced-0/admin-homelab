@@ -52,7 +52,7 @@ Propriétés importantes :
 - Héritage activable/désactivable,  
 - Contrôle fin via l’**ACL** et les **ACE**.
 
-### 📌 Permissions de partage (Share Permissions)
+### 📌 Permissions de partage
 S’appliquent au niveau du partage SMB.
 
 Niveaux classiques :
@@ -113,7 +113,6 @@ Serveur de fichiers + AD =
 ✔️ **Activer Shadow Copies** pour permettre aux utilisateurs de restaurer leurs fichiers.  
 ✔️ **Mettre en place FSRM** (quotas + filtrage de fichiers).  
 ✔️ **Éviter de donner Full Control aux utilisateurs**, sauf cas exceptionnels.  
-✔️ **Sécuriser les partages administratifs** et désactiver les anciens protocoles SMB (1.0).  
 ✔️ **Sauvegarder régulièrement les données** (Veeam, Windows Server Backup…).  
 
 ---
