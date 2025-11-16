@@ -4,11 +4,33 @@ parent: Introduction
 nav_order: 2
 ---
 
+# Introdution au DNS
 
-# DNS sur Windows Server
+---
 
 ## 🎯 Objectif de la page
-Comprendre le rôle du DNS dans un environnement Active Directory, documenter sa configuration sous Windows Server et montrer des exemples concrets de tâches d’administration.
+Présenter de manière claire et professionnelle :
+- le fonctionnement général du DNS,
+- son rôle indispensable dans Active Directory,
+- les bonnes pratiques d'administration,
+- et les tâches déjà réalisées dans le cadre de mon portfolio.
+
+---
+
+# 🌐 Qu’est-ce que le DNS ?
+
+Le **Domain Name System (DNS)** est un service réseau qui permet de traduire un **nom de domaine** (lisible par un humain) en **adresse IP** (comprise par une machine).  
+Il fonctionne comme un annuaire distribué, essentiel à la navigation et à l’accès aux services.
+
+Exemples :  
+- `www.google.com` → `142.250.75.206`  
+- `serveur-fichiers.local` → `192.168.1.20`
+
+### Pourquoi DNS est indispensable ?
+- Permet d'accéder aux services sans retenir les IP.  
+- Centralise la gestion des noms d’hôtes.  
+- Facilite la découverte automatique des ressources réseau.  
+- Constitue une brique essentielle pour de nombreux services (web, mails, AD…).
 
 ---
 
@@ -55,11 +77,3 @@ Exemple :
 | **PTR**  | Résolution inversée (IP → nom)                 |
 
 ---
-
-## 🏗️ Installation du rôle DNS (si non installé)
-
-Le rôle DNS est automatiquement installé lors de la promotion en DC.  
-Sinon :
-
-```powershell
-Install-WindowsFeature DNS -IncludeManagementTools
