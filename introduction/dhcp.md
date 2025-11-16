@@ -5,10 +5,10 @@ nav_order: 3
 ---
 
 
-# DHCP sur Windows Server
+# Introduction au DHCP
 
 ## 🎯 Objectif de la page
-Documenter l’utilisation du rôle DHCP sous Windows Server, expliquer son fonctionnement dans un réseau Active Directory et montrer des actions d’administration que je suis capable de réaliser.
+Documenter l’utilisation du rôle DHCP, expliquer son fonctionnement dans un réseau Active Directory et montrer des actions d’administration que je suis capable de réaliser.
 
 ---
 
