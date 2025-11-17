@@ -128,15 +128,15 @@ Serveur de fichiers + AD =
 
 ### 🔧 Travaux effectués sur serveur de fichiers Windows Server
 
-Création d’une arborescence professionnelle de dossiers partagés.  
-Mise en place de partages SMB avec permissions NTFS détaillées.  
-Configuration des droits via la méthode **AGDLP**.  
-Création et gestion de quotas via **FSRM**.  
-Mise en place de dossiers utilisateurs (Home Folders).  
-Gestion des redirections de dossiers via GPO.  
-Vérification des permissions effectives avec `Effective Access`.  
-Tests d’accès via comptes utilisateurs de test.  
-Documentation de la structure et des droits appliqués.
+- Création d’une arborescence professionnelle de dossiers partagés.  
+- Mise en place de partages SMB avec permissions NTFS détaillées.  
+- Configuration des droits via la méthode **AGDLP**.  
+- Création et gestion de quotas via **FSRM**.  
+- Mise en place de dossiers utilisateurs (Home Folders).  
+- Gestion des redirections de dossiers via GPO.  
+- Vérification des permissions effectives avec `Effective Access`.  
+- Tests d’accès via comptes utilisateurs de test.  
+- Documentation de la structure et des droits appliqués.
 
 ---
 
