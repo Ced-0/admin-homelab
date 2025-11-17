@@ -85,12 +85,25 @@ Les GPO permettent d’appliquer automatiquement des paramètres et politiques s
 
 ## 🛠️ Bonnes pratiques AD DS
 
-- **Planifier soigneusement la structure des domaines et des unités d’organisation** pour faciliter la gestion et la délégation des droits.  
-- **Utiliser des comptes de service dédiés et limiter les privilèges** pour renforcer la sécurité.  
-- **Appliquer les stratégies de groupe (GPO) de façon ciblée et progressive** pour éviter des effets de bord.  
-- **Sauvegarder régulièrement les contrôleurs de domaine et la base AD** pour assurer une restauration rapide en cas de problème.  
-- **Mettre en place une redondance des contrôleurs de domaine** pour garantir la haute disponibilité du service.  
-- **Surveiller les journaux d’événements et la santé des contrôleurs de domaine** pour anticiper les incidents.  
-- **Documenter les modifications et la configuration** pour faciliter la maintenance et les évolutions futures.
+**Planifier soigneusement la structure des domaines et des unités d’organisation**
+Facilite la gestion et la délégation des droits.
+
+**Utiliser des comptes de service dédiés et limiter les privilèges** 
+Renforce la sécurité.  
+
+**Appliquer les stratégies de groupe (GPO) de façon ciblée et progressive** 
+Évite des effets de bord. 
+
+**Sauvegarder régulièrement les contrôleurs de domaine et la base AD** 
+Assure une restauration rapide en cas de problème.  
+
+**Mettre en place une redondance des contrôleurs de domaine** 
+Garanti la haute disponibilité du service. 
+
+**Surveiller les journaux d’événements et la santé des contrôleurs de domaine** 
+Anticipation des incidents.  
+
+**Documenter les modifications et la configuration** 
+Facilite la maintenance et les évolutions futures.
 
 ---
