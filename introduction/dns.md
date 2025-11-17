@@ -6,6 +6,8 @@ nav_order: 2
 
 # 🌐 Domain Name System (DNS)
 
+---
+
 Le **Domain Name System (DNS)** est un service fondamental du fonctionnement d’Internet et des réseaux privés. Il assure la traduction entre les noms de domaine, facilement mémorisables par les utilisateurs, et les adresses IP utilisées par les machines pour communiquer. Sans DNS, l’accès aux sites web, serveurs internes, applications ou ressources partagées devrait se faire uniquement via des adresses numériques, rendant la navigation complexe et difficile à maintenir.
 
 DNS joue un rôle essentiel dans tous les environnements informatiques, qu’il s’agisse d’un réseau d’entreprise, d’un homelab ou d’un service en ligne. Il constitue un pilier commun aux infrastructures Windows, Linux, cloud et hybrides.
