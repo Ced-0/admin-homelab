@@ -20,7 +20,7 @@ Une fois le rôle AD DS installé, une notification apparaît en haut à droite 
 2. Sélectionner **Promouvoir ce serveur en contrôleur de domaine**.
 
 **Capture d’écran :**  
-![Notification promotion AD DS](./captures/01_promo_notification.png)
+![Notification promotion AD DS](/admin-homelab/assets/capture/adds/01_promo_notification.png)
 
 ---
 
@@ -36,7 +36,7 @@ Dans l’Assistant Configuration des Services de domaine Active Directory :
    `entreprise.local`.
 
 **Capture d’écran :**  
-![Choix du type de déploiement](./captures/02_deployment_type.png)
+![Choix du type de déploiement](/admin-homelab/assets/capture/adds/02_deployment_type.png)
 
 ---
 
@@ -48,7 +48,7 @@ Dans l’Assistant Configuration des Services de domaine Active Directory :
 2. Définir le **mot de passe DSRM** (obligatoire).
 
 **Capture d’écran :**  
-![Configuration DC](./captures/03_dc_options.png)
+![Configuration DC](/admin-homelab/assets/capture/adds/03_dc_options.png)
 
 ---
 
@@ -60,7 +60,7 @@ Cela est normal dans une nouvelle forêt.
 1. Cliquer simplement sur **Suivant**.
 
 **Capture d’écran :**  
-![Options DNS](./captures/04_dns_options.png)
+![Options DNS](/admin-homelab/assets/capture/adds/04_dns_options.png)
 
 ---
 
@@ -75,7 +75,7 @@ Laisser généralement les valeurs par défaut :
 ou adapter si politique interne.
 
 **Capture d’écran :**  
-![Chemins AD DS](./captures/05_paths.png)
+![Chemins AD DS](/admin-homelab/assets/capture/adds/05_paths.png)
 
 ---
 
@@ -87,7 +87,7 @@ L’assistant lance une **vérification de la configuration**.
 2. Cliquer sur **Installer**.
 
 **Capture d’écran :**  
-![Vérification](./captures/06_prereq_check.png)
+![Vérification](/admin-homelab/assets/capture/adds/06_prereq_check.png)
 
 ---
 
@@ -97,7 +97,7 @@ Le serveur est automatiquement promu en contrôleur de domaine.
 Une fois l’installation terminée, il redémarre.
 
 **Capture d’écran :**  
-![Installation DC](./captures/07_installation.png)
+![Installation DC](/admin-homelab/assets/capture/adds/07_installation.png)
 
 ---
 
@@ -105,6 +105,6 @@ Une fois l’installation terminée, il redémarre.
 
 ➡️ Procéder à la création des **OU**, **utilisateurs**, **groupes** et à la configuration des **GPO**.
 
-
+Une page dédiée détaillera ces étapes.
 
 ---
