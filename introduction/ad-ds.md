@@ -4,9 +4,9 @@ parent: Introduction
 nav_order: 1
 ---
 
-# Active Directory Domain Services (AD DS)
+# 🗂️ Active Directory Domain Services (AD DS)
 
-## Introduction
+## 📘 Introduction
 
 Active Directory Domain Services (AD DS) est l’un des composants centraux d’une infrastructure Windows Server. Il permet de centraliser l’authentification, la gestion des utilisateurs, des ordinateurs et des ressources d’un réseau. Grâce à AD DS, les organisations peuvent appliquer des stratégies uniformes, renforcer la sécurité et structurer efficacement leur environnement informatique.
 
@@ -80,5 +80,17 @@ Les GPO permettent d’appliquer automatiquement des paramètres et politiques s
 - Ajout et gestion de différents types d’objets (utilisateurs, groupes, machines).  
 - Application de stratégies de sécurité via les GPO.  
 - Intégration de postes clients pour tester l’authentification et la gestion centralisée.
+
+---
+
+## 🛠️ Bonnes pratiques AD DS
+
+- **Planifier soigneusement la structure des domaines et des unités d’organisation** pour faciliter la gestion et la délégation des droits.  
+- **Utiliser des comptes de service dédiés et limiter les privilèges** pour renforcer la sécurité.  
+- **Appliquer les stratégies de groupe (GPO) de façon ciblée et progressive** pour éviter des effets de bord.  
+- **Sauvegarder régulièrement les contrôleurs de domaine et la base AD** pour assurer une restauration rapide en cas de problème.  
+- **Mettre en place une redondance des contrôleurs de domaine** pour garantir la haute disponibilité du service.  
+- **Surveiller les journaux d’événements et la santé des contrôleurs de domaine** pour anticiper les incidents.  
+- **Documenter les modifications et la configuration** pour faciliter la maintenance et les évolutions futures.
 
 ---
