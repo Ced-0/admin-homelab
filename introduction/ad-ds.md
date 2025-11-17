@@ -6,8 +6,6 @@ nav_order: 1
 
 # 🗂️ Active Directory Domain Services (AD DS)
 
-## 📘 Introduction
-
 Active Directory Domain Services (AD DS) est l’un des composants centraux d’une infrastructure Windows Server. Il permet de centraliser l’authentification, la gestion des utilisateurs, des ordinateurs et des ressources d’un réseau. Grâce à AD DS, les organisations peuvent appliquer des stratégies uniformes, renforcer la sécurité et structurer efficacement leur environnement informatique.
 
 ---
