@@ -7,8 +7,6 @@ nav_order: 3
 
 # 🚦 Dynamic Host Configuration Protocol (DHCP)
 
-## 📘 Introduction
-
 Le **Dynamic Host Configuration Protocol (DHCP)** est un service réseau essentiel qui automatise l’attribution des adresses IP et d’autres paramètres réseau aux appareils d’un réseau local. Grâce à DHCP, les administrateurs évitent la configuration manuelle fastidieuse et réduisent les erreurs de configuration.
 
 Ce protocole facilite la gestion des réseaux, qu’ils soient petits (homelab, PME) ou très étendus (grandes entreprises), et garantit que chaque appareil obtient une adresse IP valide pour communiquer efficacement.
