@@ -38,7 +38,7 @@ Niveaux classiques :
 - **Read**  
 - **Change**  
 - **Full Control**
-- 
+
 ### 📌 Permissions NTFS
 Les permissions NTFS permettent de contrôler l’accès localement au système de fichiers.
 
