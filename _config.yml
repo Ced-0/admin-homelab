@@ -1,5 +1,7 @@
 title: "Mon Wiki Homelab"
 remote_theme: "pmarsceill/just-the-docs"
+baseurl: "/admin-homelab"
+
 
 # Permet les chemins simples (ex: /windows/)
 permalink: pretty
