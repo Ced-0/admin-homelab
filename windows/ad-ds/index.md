@@ -1,6 +1,6 @@
 ---
 title: Documentation AD DS
-nav_order: 4
+parent: Administration Windows
 has_children: true
 ---
 
