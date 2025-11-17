@@ -6,6 +6,8 @@ nav_order: 4
 
 # 📁 Création de l’arborescence Active Directory (OU)
 
+---
+
 Cette procédure décrit la mise en place de l’arborescence d’Unités d’Organisation (OU) utilisée dans mon homelab, conformément aux bonnes pratiques AD DS.
 
 ---
