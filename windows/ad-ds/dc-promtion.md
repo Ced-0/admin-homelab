@@ -6,6 +6,8 @@ nav_order: 3
 
 # 📘 Promotion du serveur en contrôleur de domaine (AD DS)
 
+---
+
 Cette procédure décrit la promotion d’un serveur Windows en contrôleur de domaine via l’interface graphique.  
 
 ---
