@@ -1,7 +1,7 @@
 ---
-title: Documentation AD DS
-nav_order: 3
-has_children: true
+title: Index AD DS
+parent: Documentation AD DS
+nav_order: 1
 ---
 
 # Active Directory Domain Services (AD DS) - Documentation Technique
