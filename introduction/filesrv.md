@@ -6,6 +6,8 @@ nav_order: 4
 
 # 📁 Qu’est-ce qu’un serveur de fichiers ?
 
+---
+
 Un **serveur de fichiers** est un serveur dédié au stockage, au partage et à la gestion des données d’une organisation.  
 Il permet aux utilisateurs d’accéder à des dossiers partagés de manière sécurisée, centralisée et organisée.
 
