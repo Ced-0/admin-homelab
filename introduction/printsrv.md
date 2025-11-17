@@ -9,14 +9,15 @@ nav_order: 5
 Un **serveur d’impression** centralise, gère et distribue les imprimantes au sein d’un réseau d’entreprise.  
 Il permet aux utilisateurs d’accéder facilement aux imprimantes tout en garantissant une gestion contrôlée, sécurisée et centralisée.
 
-Le serveur d’impression sous Windows permet :
+## Serveur d’impression sous Windows permet :
+
 - l’installation et le partage d’imprimantes,
 - la gestion des files d’attente d’impression,
 - le déploiement d’imprimantes via GPO,
 - la gestion centralisée des pilotes d’impression,
 - la surveillance des impressions et des incidents.
 
-Le serveur d’impression sous Linux utilise principalement **CUPS** (Common Unix Printing System) et permet :
+## Serveur d’impression sous Linux utilise principalement **CUPS** (Common Unix Printing System) et permet :
 - l’installation et le partage d’imprimantes,
 - la gestion des files d’attente d’impression,
 - la configuration des droits d’accès aux imprimantes,
