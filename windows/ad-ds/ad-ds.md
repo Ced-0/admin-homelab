@@ -1,5 +1,5 @@
 ---
-title: Index AD DS
+title: Récapitulatif - AD DS
 parent: Documentation AD DS
 nav_order: 1
 ---
