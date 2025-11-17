@@ -1,5 +1,5 @@
 ---
-title: Procédure - Installion AD DS
+title: Procédure - Installation AD DS
 parent: Documentation AD DS
 nav_order: 1
 ---
