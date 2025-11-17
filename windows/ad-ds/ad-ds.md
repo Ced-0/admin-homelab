@@ -26,9 +26,7 @@ Description rapide de l’infrastructure :
 5. Cliquer sur **Suivant** puis sur **Installer**.
 6. Attendre la fin de l’installation.
 
-### Capture d’écran
-![Installation AD DS](./captures/AD_installation.png)
-
+👉 [**Procédure**](./adds-installation.md)
 
 ### Promotion du serveur en contrôleur de domaine
 
@@ -41,8 +39,7 @@ Description rapide de l’infrastructure :
 7. Continuer en validant les options par défaut, ou adapter si nécessaire (DNS, chemin des bases de données…).
 8. Lancer la promotion et redémarrer le serveur automatiquement à la fin.
 
-### Capture d’écran
-![Promotion DC](./captures/DC_promotion.png)
+👉 [**Procédure**](./dc-promtion.md)
 
 ---
 
