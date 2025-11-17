@@ -1,3 +1,9 @@
+---
+title: Procédure - Installion AD DS
+parent: Documentation AD DS
+nav_order: 1
+---
+
 # 📘 Installation du rôle Active Directory Domain Services (AD DS)
 
 ---
