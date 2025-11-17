@@ -18,7 +18,7 @@ Cette procédure décrit étape par étape l’installation du rôle **AD DS** v
 2. Cliquer sur **Gestionnaire de serveur** (Server Manager) dans la barre des tâches ou le menu Démarrer.
 
 **Capture d’écran :**  
-![Gestionnaire de serveur](/assets/capture/adds/01_server_manager.png)
+![Gestionnaire de serveur](assets/capture/adds/01_server_manager.png)
 
 ---
 
@@ -27,7 +27,7 @@ Cette procédure décrit étape par étape l’installation du rôle **AD DS** v
 1. Dans le tableau de bord du Gestionnaire de serveur, cliquer sur **Ajouter des rôles et fonctionnalités**.
 
 **Capture d’écran :**  
-![Ajouter rôles](/assets/capture/adds/02_add_roles.png)
+![Ajouter rôles](assets/capture/adds/02_add_roles.png)
 
 ---
 
@@ -40,7 +40,7 @@ Cette procédure décrit étape par étape l’installation du rôle **AD DS** v
 2. Arriver sur la page **Sélection des rôles de serveur**.
 
 **Capture d’écran :**  
-![Assistant rôles](/assets/capture/adds/03_wizard_navigation.png)
+![Assistant rôles](assets/capture/adds/03_wizard_navigation.png)
 
 ---
 
@@ -50,7 +50,7 @@ Cette procédure décrit étape par étape l’installation du rôle **AD DS** v
 2. Accepter l’ajout des fonctionnalités nécessaires si une fenêtre apparaît.
 
 **Capture d’écran :**  
-![Sélection AD DS](/assets/capture/adds/04_select_adds.png)
+![Sélection AD DS](assets/capture/adds/04_select_adds.png)
 
 ---
 
@@ -60,7 +60,7 @@ Cette procédure décrit étape par étape l’installation du rôle **AD DS** v
 2. Cliquer sur **Installer**.
 
 **Capture d’écran :**  
-![Installation AD DS](/assets/capture/adds/05_install_adds.png)
+![Installation AD DS](assets/capture/adds/05_install_adds.png)
 
 ---
 
@@ -70,7 +70,7 @@ L’assistant installe les composants AD DS.
 Aucune action n’est requise jusqu’à la fin du processus.
 
 **Capture d’écran :**  
-![Fin installation](/assets/capture/adds/06_install_complete.png)
+![Fin installation](assets/capture/adds/06_install_complete.png)
 
 ---
 
