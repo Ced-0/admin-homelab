@@ -89,14 +89,14 @@ Print Server + AD =
 
 ### 🔧 Travaux effectués sur serveur d’impression Windows Server
 
-Installation du rôle **Print and Document Services**.  
-Ajout et configuration d’imprimantes réseau (ports TCP/IP).  
-Partage d’imprimantes via SMB avec gestion des permissions.  
-Déploiement automatique d’imprimantes via **GPO**.  
-Tests d’impression avec utilisateurs et groupes Active Directory.  
-Gestion des files : suppression, priorités, incidents.  
-Vérification des droits via les ACL (Print, Manage Printers…).  
-Documentation du parc d’imprimantes et des pilotes utilisés.  
+- Installation du rôle **Print and Document Services**.  
+- Ajout et configuration d’imprimantes réseau (ports TCP/IP).  
+- Partage d’imprimantes via SMB avec gestion des permissions.  
+- Déploiement automatique d’imprimantes via **GPO**.  
+- Tests d’impression avec utilisateurs et groupes Active Directory.  
+- Gestion des files : suppression, priorités, incidents.  
+- Vérification des droits via les ACL (Print, Manage Printers…).  
+- Documentation du parc d’imprimantes et des pilotes utilisés.  
 
 ---
 
