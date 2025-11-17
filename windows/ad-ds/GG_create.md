@@ -6,6 +6,8 @@ nav_order: 5
 
 # 👥 Création des Groupes Globaux (GG)
 
+---
+
 Dans cette étape, nous créons les **Groupes Globaux (GG)** utilisés pour représenter les services ou départements de l’entreprise.  
 Ces groupes seront ensuite utilisés dans la méthode **AGDLP** pour gérer les permissions.
 
