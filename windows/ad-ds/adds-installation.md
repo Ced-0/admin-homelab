@@ -18,7 +18,7 @@ Cette procédure décrit étape par étape l’installation du rôle **AD DS** v
 2. Cliquer sur **Gestionnaire de serveur** (Server Manager) dans la barre des tâches ou le menu Démarrer.
 
 **Capture d’écran :**  
-![Gestionnaire de serveur](/assets/capture/adds/01_server_manager.png)
+![Gestionnaire de serveur](/admin-homelab/assets/capture/adds/01_server_manager.png)
 
 ---
 
