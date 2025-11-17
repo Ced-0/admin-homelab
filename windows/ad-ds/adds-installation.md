@@ -46,7 +46,7 @@ Cette procédure décrit étape par étape l’installation du rôle **AD DS** v
 
 ## 4. Sélectionner le rôle AD DS
 
-1. Cocher **Services de domaine Active Directory (AD DS)**.
+1. Cocher **Services AD DS**
 2. Accepter l’ajout des fonctionnalités nécessaires si une fenêtre apparaît.
 
 **Capture d’écran :**  
