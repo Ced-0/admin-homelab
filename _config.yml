@@ -8,4 +8,4 @@ permalink: pretty
 # Highlight.js pour la coloration des blocs de code
 just_the_docs:
   search_enabled: true
-  extra_head: "_includes/highlight-js.html"
+  extra_head: "_includes/prism.html"
