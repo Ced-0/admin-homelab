@@ -14,14 +14,14 @@ Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
 ```
 - Vérifier l'installation
 
-```Powershell
+```powershell
 Get-WindowsFeature AD-Domain-Services
 ```
 
 ## 2. Promotion en contrôleur de domaine
 - Promouvoir un serveur en nouveau domaine
 
-```Powershell
+```powershell
 Install-ADDSForest `
     -DomainName "Homelab.local" `
     -DomainNetbiosName "HOMELAB" `
@@ -30,7 +30,7 @@ Install-ADDSForest `
 ```
 - Promouvoir un serveur dans un domaine existant
 
-```Powershell
+```powershell
 Install-ADDSDomainController `
     -DomainName "Homelab.local" `
     -Credential (Get-Credential) `
@@ -38,14 +38,14 @@ Install-ADDSDomainController `
 ```
 - Vérifier l’état du contrôleur de domaine
 
-```Powershell
+```powershell
 Get-ADDomainController -Filter *
 ```
 
 ## 3. Création des OU
 - Créer une OU
 
-```Powershell
+```powershell
 New-ADOrganizationalUnit -Name "Mon entreprise" -ProtectedFromAccidentalDeletion $true
 ```
 - Créer plusieurs OU
@@ -58,19 +58,20 @@ foreach ($ou in $OUList) {
 }
 ```
 - Lister les OU
-```Powershell
+
+```powershell
 Get-ADOrganizationalUnit -Filter * | Select Name, DistinguishedName
 ```
 
 ## 4. Création des groupes globaux
 - Créer un groupe global
 
-```Powershell
+```powershell
 New-ADGroup -Name "GG_Direction" -GroupScope Global -Path "OU=Services,OU=Groupes,OU=Mon entreprise,DC=homelab,DC=local"
 ```
 - Créer plusieurs groupe globaux
 
-```Powershell
+```powershell
 $Groups = "GG_Direction","GG_Comptabilité","GG_Sécrétariat","GG_Production","GG_Support"
 
 foreach ($g in $Groups) {
@@ -79,19 +80,19 @@ foreach ($g in $Groups) {
 ```
 - Ajouter un utilisateur à un groupe
 
-```Powershell
+```powershell
 Add-ADGroupMember -Identity "GG_Direction" -Members utilisateur1
 ```
 - Ajouter plusieurs utilisateurs à un groupe
 
-```Powershell
+```powershell
 Add-ADGroupMember -Identity "GG_Production" -Members user1,user2,user3
 ```
 
 ## 5. Création des utilisateurs
 - Créer un utilisateur
 
-```Powershell
+```powershell
 New-ADUser `
     -Name "Christian Hef" `
     -SamAccountName Chef `
@@ -103,25 +104,25 @@ New-ADUser `
 ```
 - Définir un dossier personnel
 
-```Powershell
+```powershell
 Set-ADUser utilisateur1 -HomeDirectory "\\SERVEUR\Utilisateurs\utilisateur1" -HomeDrive "H:"
 ```
 - Désactiver / activer un compte
 
-```Powershell
+```powershell
 Disable-ADAccount -Identity utilisateur1
 Enable-ADAccount -Identity utilisateur1
 ```
 - Réinitialiser un mot de passe
 
-```Powershell
+```powershell
 Set-ADAccountPassword utilisateur1 -Reset -NewPassword (Read-Host -AsSecureString "Nouveau mot de passe")
 ```
 
 ## 6. Automatisation
 - Script simple de création d’un utilisateur
 
-```Powershell
+```powershell
 # Demande des informations
 $Prenom = Read-Host "Prénom"
 $Nom = Read-Host "Nom"
