@@ -1,7 +1,7 @@
 ---
 title: Procédure - Création GG
 parent: Documentation AD DS
-nav_order: 5
+nav_order: 6
 ---
 
 # 👥 Création des Groupes Globaux (GG)
