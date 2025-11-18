@@ -50,7 +50,7 @@ New-ADOrganizationalUnit -Name "Mon entreprise" -ProtectedFromAccidentalDeletion
 ```
 - Créer plusieurs OU
 
-```Powershell
+```powershell
 $OUList = "Groupes","Ordinateurs","Utilisateurs"
 
 foreach ($ou in $OUList) {
