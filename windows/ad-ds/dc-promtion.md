@@ -1,7 +1,7 @@
 ---
 title: Procédure - Promotion DC
 parent: Documentation AD DS
-nav_order: 3
+nav_order: 4
 ---
 
 # 📘 Promotion du serveur en contrôleur de domaine (AD DS)
