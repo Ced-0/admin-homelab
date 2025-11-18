@@ -5,9 +5,7 @@ remote_theme: "pmarsceill/just-the-docs"
 permalink: pretty
 
 # Active la recherche
-just_the_docs:
-  search_enabled: true
-
 # Highlight.js pour la coloration des blocs de code
 just_the_docs:
+  search_enabled: true
   extra_head: "_includes/highlight-js.html"
