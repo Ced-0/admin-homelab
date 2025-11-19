@@ -72,7 +72,13 @@ Pour les machines serveurs du domaine.
 
 ---
 
-## 6. Arborescence complète attendue
+## 6. OU Utilisateurs
+
+Cette OU regroupe l’ensemble des comptes utilisateurs finaux (hors comptes administratifs si souhaité).
+
+---
+
+## 7. Arborescence complète attendue
 
 Voici l’arborescence complète :
 ```
