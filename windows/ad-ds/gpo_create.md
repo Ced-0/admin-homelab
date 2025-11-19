@@ -16,7 +16,7 @@ Les GPO permettent de configurer automatiquement les postes clients : sécurité
 1. Aller dans **Outils d'administration**
 2. Cliquer sur **Gestion de la stratégie de groupe**
 
-![Console GPMC](/admin-homelab/assets/capture/gpo/gpmc_console.png)
+![Console GPMC](/admin-homelab/assets/capture/adds/gpmc_console.png)
 
 ---
 
@@ -28,7 +28,7 @@ Dans la console, on distingue :
 - **Forêt / Domaine / OU** → où sont liées les GPO  
 - **Filtres WMI / Sécurité** → filtres d'application  
 
-![Structure GPMC](/admin-homelab/assets/capture/gpo/gpmc_structure.png)
+![Structure GPMC](/admin-homelab/assets/capture/adds/gpmc_structure.png)
 
 ---
 
@@ -38,7 +38,7 @@ Dans la console, on distingue :
 2. Sélectionner : **Créer un objet GPO dans ce domaine et le lier ici**
 3. Nommer la GPO (ex : `GPO_Verouillage_Ecran`)
 
-![Créer GPO](/admin-homelab/assets/capture/gpo/create_gpo.png)
+![Créer GPO](/admin-homelab/assets/capture/adds/create_gpo.png)
 
 ---
 
@@ -53,7 +53,7 @@ Paramètres appliqués **au poste** avant ouverture de session.
 ### 👤 Configuration utilisateur  
 Paramètres appliqués **à l’utilisateur**.
 
-![Modifier GPO](/admin-homelab/assets/capture/gpo/edit_gpo.png)
+![Modifier GPO](/admin-homelab/assets/capture/adds/edit_gpo.png)
 
 ---
 
@@ -69,7 +69,7 @@ Configurer :
 - **Empêcher de modifié l'écran de veille** → *Activé*
 - **Dépassement du délai d'expiration de l'écran de veille** → *600 secondes (10 min)* → *Activé*  
 
-![Screensaver GPO](/admin-homelab/assets/capture/gpo/screensaver.png)
+![Screensaver GPO](/admin-homelab/assets/capture/adds/screensaver.png)
 
 ---
 
@@ -86,7 +86,7 @@ Paramètres :
 - **Papier peint du Bureau** : chemin UNC  
 - Mode d’affichage : *Ajusté / Centré / Étendu*
 
-![Wallpaper GPO](/admin-homelab/assets/capture/gpo/wallpaper.png)
+![Wallpaper GPO](/admin-homelab/assets/capture/adds/wallpaper.png)
 
 ---
 
@@ -107,7 +107,7 @@ gpresult /r
 gpresult /h gpo-report.html
 ```
 
-![gpresult](/admin-homelab/assets/capture/gpo/gpresult.png)
+![gpresult](/admin-homelab/assets/capture/adds/gpresult.png)
 
 ---
 
@@ -124,11 +124,11 @@ La dernière GPO appliquée l’emporte, sauf si :
 
 - **Appliqué (Enforced)** est activé
 
-![Héritage GPO](/admin-homelab/assets/capture/gpo/inheritance1.png)
+![Héritage GPO](/admin-homelab/assets/capture/adds/inheritance1.png)
 
 - L’OU **bloque l’héritage**  
 
-![Héritage GPO](/admin-homelab/assets/capture/gpo/inheritance2.png)
+![Héritage GPO](/admin-homelab/assets/capture/adds/inheritance2.png)
 
 ---
 
@@ -140,7 +140,7 @@ La dernière GPO appliquée l’emporte, sauf si :
 2. Retirer *Authenticated Users*
 3. Ajouter un groupe (ex : `GG_Production`)
 
-![Filtrage](/admin-homelab/assets/capture/gpo/filter_add.png)
+![Filtrage](/admin-homelab/assets/capture/adds/filter_add.png)
 
 ---
 
