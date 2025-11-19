@@ -3,6 +3,11 @@ title: AD DS
 parent: Introduction
 nav_order: 1
 ---
+# Test Prism
+
+```powershell
+Write-Host "Prism fonctionne !"
+```
 
 # 🗂️ Active Directory Domain Services (AD DS)
 
