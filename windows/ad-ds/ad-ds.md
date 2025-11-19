@@ -88,7 +88,8 @@ Mon entreprise
 
 ## 5. Application des Group Policy Objects (GPO)
 
-- Description simple de la GPO créée (exemple : Verouillage écran, fond d'écran d'entreprise)
+- Création de GPO de verouillage écran au bout de 10 minutes d'incativité
+- Création de GPO déployant un fond d'écran d'entreprise
 
 👉 [**Procédure**](./gpo_create.md)
 
