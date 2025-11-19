@@ -36,7 +36,7 @@ Dans la console, on distingue :
 
 1. Clic droit sur l’OU cible  
 2. Sélectionner : **Créer un objet GPO dans ce domaine et le lier ici**
-3. Nommer la GPO (ex : `GPO_Wallpaper_Entreprise`)
+3. Nommer la GPO (ex : `GPO_Verouillage_Ecran`)
 
 ![Créer GPO](/admin-homelab/assets/capture/gpo/create_gpo.png)
 
@@ -57,7 +57,7 @@ Paramètres appliqués **à l’utilisateur**.
 
 ---
 
-# 5. Exemple : verrouillage automatique (screensaver)
+# 5. Exemple : verrouillage automatique
 
 1. Éditer la GPO  
 2. Aller dans :  
@@ -66,8 +66,8 @@ Paramètres appliqués **à l’utilisateur**.
 Configurer :
 
 - **Activer l'écran de veille** → *Activé*  
-- **Temps d'attente** → *600 secondes (10 min)*  
-- **Empêcher la modification** → *Activé*
+- **Empêcher de modifié l'écran de veille** → *Activé*
+- **Dépassement du délai d'expiration de l'écran de veille** → *600 secondes (10 min)* → *Activé*  
 
 ![Screensaver GPO](/admin-homelab/assets/capture/gpo/screensaver.png)
 
@@ -76,14 +76,14 @@ Configurer :
 # 6. Exemple : fond d’écran d’entreprise
 
 1. Ajouter le fichier sur un partage :  
-   `\\srv-fichiers\partage\wallpaper.jpg`
+   `\\SRV-FIC\Outils$\GPO_Ressources\wallpaper.jpg`
 
 2. Modifier la GPO :  
    `Configuration utilisateur → Modèles d’administration → Bureau → Active Desktop`
 
 Paramètres :
 
-- **Papier peint Active Desktop** : chemin UNC  
+- **Papier peint du Bureau** : chemin UNC  
 - Mode d’affichage : *Ajusté / Centré / Étendu*
 
 ![Wallpaper GPO](/admin-homelab/assets/capture/gpo/wallpaper.png)
@@ -92,7 +92,7 @@ Paramètres :
 
 # 7. Tester les GPO sur un poste Windows
 
-### ▶️ Forcer la mise à jour
+### Forcer la mise à jour
 ```
 gpupdate /force
 ```
@@ -122,20 +122,25 @@ Les GPO s'appliquent dans cet ordre :
 
 La dernière GPO appliquée l’emporte, sauf si :
 
-- **Forcer (Enforced)** est activé  
+- **Appliqué (Enforced)** est activé
+
+![Héritage GPO](/admin-homelab/assets/capture/gpo/inheritance1.png)
+
 - L’OU **bloque l’héritage**  
 
-![Héritage GPO](/admin-homelab/assets/capture/gpo/inheritance.png)
+![Héritage GPO](/admin-homelab/assets/capture/gpo/inheritance2.png)
 
 ---
 
 # 9. Filtrage des GPO
 
-## 🔹 Par groupes de sécurité
+## Par groupes de sécurité
 
 1. Ouvrir **Délégation / Sécurité**
 2. Retirer *Authenticated Users*
 3. Ajouter un groupe (ex : `GG_Production`)
+
+![Filtrage](/admin-homelab/assets/capture/gpo/filter_add.png)
 
 ---
 
