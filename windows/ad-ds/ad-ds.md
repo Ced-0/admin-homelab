@@ -47,15 +47,20 @@ Description rapide de l’infrastructure :
 
 Description de la structure des OU mises en place (exemple) :
 ```
-homelab.local
-├── Utilisateurs
+Mon entreprise
+│
 ├── Groupes
+│   ├── Partages
+│   └── Services
+│
 ├── Ordinateurs
-└── Services
+│   ├── Clients
+│   └── Serveurs
+│
+└── Utilisateurs
 ```
 
-### Capture d’écran
-![Création OU](./captures/ou_creation.png)
+👉 [**Procédure**](./ou-creation.md)
 
 ---
 
@@ -65,30 +70,27 @@ homelab.local
 
 - Étapes suivies pour créer un utilisateur.
 
-### Capture d’écran  
-![Création utilisateur](./captures/user_creation.png)
+👉 [**Procédure**](./user_create.md)
 
-### 4.2 Gestion des groupes
+### 4.2 Gestion des groupes globaux
 
 - Création et affectation d’utilisateurs à des groupes.
 
-### Capture d’écran  
-![Gestion groupes](./captures/group_management.png)
+👉 [**Procédure**](./GG_create.md)
+
+### 4.2 Gestion des groupes de domaine local
+
+- Création et affectation des groupe globaux aux groupes de domaine local.
+
+👉 [**Procédure**](./DL_create.md)
 
 ---
 
 ## 5. Application des Group Policy Objects (GPO)
 
-- Description simple de la GPO créée (exemple : redirection de dossiers, sécurité)
+- Description simple de la GPO créée (exemple : Verouillage écran, fond d'écran d'entreprise)
 
-### Capture d’écran  
-![GPO](./captures/gpo_configuration.png)
-
----
-
-## 6. Tests et validation
-
-- Explication rapide des tests d’authentification, de jonction au domaine, etc.
+👉 [**Procédure**](./gpo_create.md)
 
 ---
 
