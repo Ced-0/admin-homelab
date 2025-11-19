@@ -18,7 +18,6 @@ La zone *demo.infra* sert de **terrain de démonstration** pour montrer :
 3. Sélectionner **Nouvelle zone…**  
 4. Choisir :  
    - **Zone principale**  
-   - **Ne pas stocker dans Active Directory**  
    - Nom de zone : **demo.infra**  
    - Fichier de zone : *demo.infra.dns*
 
