@@ -1,5 +1,5 @@
 <!-- Prism.js CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.30.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.30.0/themes/prism.css" rel="stylesheet" />
 
 <!-- Prism.js JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.30.0/prism.min.js"></script>
@@ -11,63 +11,59 @@
 
 /* Background + couleur de base */
 code[class*="language-"], pre[class*="language-"] {
-  color: #ffffff;
-  background: #012456;           /* Bleu ISE */
+  color: #ffffff !important;
+  background: #012456 !important;  /* Bleu ISE */
 }
 
 /* Commentaires (#) – vert pâle */
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-  color: #6A9955;
+.token.comment {
+  color: #6A9955 !important;
 }
 
-/* Chaînes (") – vert vif */
+/* Chaînes (") – brun-rouge comme ISE */
 .token.string {
-  color: #CE9178;
+  color: #CE9178 !important;
 }
 
 /* Variables PowerShell $var – jaune */
-.token.variable,
-.token.symbol {
-  color: #FFC400;
+.token.variable {
+  color: #FFC400 !important;
 }
 
-/* Cmdlets et fonctions – bleu clair */
+/* Cmdlets et fonctions – bleu clair ISE */
 .token.function {
-  color: #61AFEF;
+  color: #61AFEF !important;
 }
 
-/* Paramètres PowerShell (-Name, -Path…) – rouge rosé */
+/* Paramètres PowerShell -Name – rouge rosé */
 .token.parameter,
 .token.attr-name {
-  color: #D16969;
+  color: #D16969 !important;
 }
 
 /* Mots-clés (if, foreach…) – cyan */
 .token.keyword {
-  color: #4FC1FF;
+  color: #4FC1FF !important;
 }
 
 /* Types [string], [int] – jaune clair */
 .token.class-name {
-  color: #E5C07B;
+  color: #E5C07B !important;
 }
 
-/* Opérateurs (=, |, +…) – blanc cassé */
+/* Opérateurs et ponctuation */
 .token.operator,
 .token.punctuation {
-  color: #DCDCDC;
+  color: #DCDCDC !important;
 }
 
-/* Nombres 123 – orange */
+/* Nombres – orange */
 .token.number {
-  color: #D19A66;
+  color: #D19A66 !important;
 }
 
-/* Substitutions $( … ) */
+/* Substitutions $(…) – violet */
 .token.interpolation {
-  color: #C586C0;
+  color: #C586C0 !important;
 }
 </style>
