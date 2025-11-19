@@ -32,6 +32,13 @@ La zone *demo.infra* sert de **terrain de démonstration** pour montrer :
 
 # 2. Ajout d’une zone inverse (in-addr.arpa) pour la démo
 
+1. Ouvrir **DNS Manager**  
+2. Clic droit sur **Zones de recherche inversée**  
+3. Sélectionner **Nouvelle zone…**  
+
+**Capture d’écran :**  
+![Nouvelle zone inverse](/admin-homelab/assets/capture/dns/demo_reverse_create.png)
+
 # 3. Structure de la zone *demo.infra*
 
 La zone contient des enregistrements **mixtes (réels et fictifs)** afin de démontrer différentes possibilités d'administration DNS.
@@ -42,10 +49,11 @@ La zone contient des enregistrements **mixtes (réels et fictifs)** afin de dém
 
 | Nom | Type | IP | Description |
 |------|------|------|-----------------------------|
-| srv-dns | A | 172.20.10.10 | Serveur DNS réel de la zone |
-| web | A | 172.20.10.20 | Service Web interne (exemple) |
-| nas | A | 172.20.10.30 | NAS interne fictif |
-| app | A | 172.20.10.40 | Application interne fictive |
+| srv-dns1 | A | 192.168.100.103 | Serveur DNS Principal |
+| srv-dns2 | A | 192.168.100.110 | Serveur DNS Secondaire |
+| web | A | 192.168.100.20 | Service Web interne (exemple) |
+| nas | A | 192.168.100.30 | NAS interne fictif |
+| app | A | 192.168.100.40 | Application interne fictive |
 
 **Capture d’écran :**  
 ![Enregistrements A](/admin-homelab/assets/capture/dns/demo_a_records.png)
@@ -71,7 +79,7 @@ Même si tu n’as pas de serveur mail, cet enregistrement montre ta compréhens
 | Nom | Type | Valeur |
 |------|------|---------------------------|
 | demo.infra | MX | 10 mail.demo.infra |
-| mail | A | 172.20.10.15 |
+| mail | A | 192.168.100.15 |
 
 **Capture d’écran :**  
 ![MX](/admin-homelab/assets/capture/dns/demo_mx_records.png)
@@ -80,12 +88,12 @@ Même si tu n’as pas de serveur mail, cet enregistrement montre ta compréhens
 
 # 4. Redirecteur conditionnel vers *demo.infra*
 
-Tu peux créer un redirecteur conditionnel sur un **autre serveur DNS** de ton homelab pour montrer la résolution externe de zone interne.
+Création d'un redirecteur conditionnel sur un **controlleur de domaine** pour montrer la résolution externe.
 
 1. Ouvrir DNS Manager  
 2. Clic droit sur **Redirecteurs conditionnels**  
 3. Ajouter : **demo.infra**  
-4. IP du serveur : **172.20.10.10**
+4. IP du serveur : **192.168.100.103**
 
 **Capture d’écran :**  
 ![Redirecteur conditionnel](/admin-homelab/assets/capture/dns/demo_forwarder.png)
@@ -100,22 +108,46 @@ Tests simples :
 nslookup web.demo.infra
 nslookup files.demo.infra
 nslookup -type=mx demo.infra
-nslookup 172.20.10.20
+nslookup 192.168.100.20
 ```
 
-Capture d’écran :
+**Capture d’écran :**  
+![Test](/admin-homelab/assets/capture/dns/nslookup_test.png)
 
-# 6. Résultat final de la zone
+# 6. Autoriser le transfert de zone vers BIND9
+
+1. Ouvrir **DNS Manager** sur le serveur Windows principal.
+2. Clic droit sur le serveur → **Propriétés** →
+3. Aller dans l’onglet **Avancé**
+4. Cocher **activer les zones secondaire Bind**
+
+**Capture d’écran :**  
+![Autoriser Bind](/admin-homelab/assets/capture/dns/allow_bind.png)
+
+5. Naviguer jusqu’à la zone concernée (ex : *demo.infra*).
+6. Clic droit sur la zone → **Propriétés**.
+7. Aller dans l’onglet **Transferts de zone**.
+8. Cocher **Autoriser le transfert de zone**.
+9. Sélectionner l’option **Transférer vers des serveurs de noms uniquement**.
+10. Ajouter l’adresse IP du serveur BIND9 (ex : `192.168.100.110`).
+11. Valider avec **OK** pour enregistrer les modifications.
+
+**Capture d’écran :**  
+![Transfert](/admin-homelab/assets/capture/dns/transfer_to.png)
+
+
+# 7. Résultat final de la zone
 
 ```
 demo.infra
-├── srv-dns       A      172.20.10.10
-├── web           A      172.20.10.20
-├── nas           A      172.20.10.30
-├── app           A      172.20.10.40
+├── srv-dns1      A      192.168.100.103
+├── srv-dns2      A      192.168.100.110
+├── web           A      192.168.100.20
+├── nas           A      192.168.100.30
+├── app           A      192.168.100.40
 ├── files         CNAME  nas.demo.infra
 ├── portail       CNAME  web.demo.infra
-├── mail          A      172.20.10.15
+├── mail          A      192.168.100.15
 └── demo.infra    MX     10 mail.demo.infra
 ```
 
@@ -123,6 +155,7 @@ demo.infra
 
 # Étape suivante
 
-➡️ Intégration de la zone demo.infra dans un scénario complet
+➡️ La configuration du serveur Bind est dans la partie consacrée à Debian
+➡️ Nous passons à la section **DHCP**
 
 ---
