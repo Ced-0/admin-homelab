@@ -34,8 +34,9 @@ Les DL créés correspondront exactement à ces dossiers.
 ---
 
 # 1. Convention de nommage utilisée
-
+```
 DL_<NomDuDossier>_<Droit>
+```
 
 ---
 
