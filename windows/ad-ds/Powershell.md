@@ -1,7 +1,7 @@
 ---
 title: Powershell - Configuration AD DS
 parent: Documentation AD DS
-nav_order: 2
+nav_order: 1
 ---
 
 # ⚡ PowerShell – Administration Active Directory
@@ -155,7 +155,35 @@ Add-ADGroupMember -Identity "DL_DATA_RO" -Members "GG_Direction"
 Add-ADGroupMember -Identity "DL_DATA_RO" -Members "GG_Direction","GG_Comptabilite","GG_Secretariat"
 ```
 
-## 6. Automatisation
+## 6. Création de GPO verouillage écran
+
+- Créer la GPO
+
+```powershell
+New-GPO -Name "Verrouillage_Automatique" -Comment "Verrouillage automatique écran de veille"
+```
+- Activer l'écran de veille
+
+```powershell
+Set-GPRegistryValue -Name $GpoName -Key "HKCU\Software\Policies\Microsoft\Windows\Control Panel\Desktop" -ValueName "ScreenSaveActive" -Type String -Value "1"
+```
+- Temps d'attente pour le verrouillage (600 secondes = 10 minutes)
+
+```powershell
+Set-GPRegistryValue -Name "Verrouillage_Automatique" -Key "HKCU\Software\Policies\Microsoft\Windows\Control Panel\Desktop" -ValueName "ScreenSaveTimeOut" -Type String -Value "600"
+```
+- Empêcher la modification de l'écran de veille
+
+```powershell
+Set-GPRegistryValue -Name "Verrouillage_Automatique" -Key "HKCU\Software\Policies\Microsoft\Windows\Control Panel\Desktop" -ValueName "ScreenSaverIsSecure" -Type String -Value "1"
+```
+- Lier la GPO à l'OU avec l'option Appliqué (Enforced)
+
+```powershell
+New-GPLink -Name "Verrouillage_Automatique" -Target "OU=Utilisateurs,OU=Mon Entreprise,DC=Homelab,DC=local" -Enforced "Yes"
+```
+
+## 7. Automatisation
 - Script simple de création d’un utilisateur
 
 ```powershell
