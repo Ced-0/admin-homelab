@@ -7,4 +7,6 @@ permalink: pretty
 # Active la recherche
 just_the_docs:
   search_enabled: true
-  
+
+# Active Pygments pour la coloration syntaxique
+highlighter: pygments  
