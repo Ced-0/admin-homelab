@@ -9,7 +9,7 @@ nav_order: 2
 ## 1. Installation AD DS
 - Installer le rôle AD DS
 
-```powershell
+```Powershell
 Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
 ```
 - Vérifier l'installation
