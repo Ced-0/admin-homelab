@@ -63,33 +63,7 @@ foreach ($ou in $OUList) {
 Get-ADOrganizationalUnit -Filter * | Select Name, DistinguishedName
 ```
 
-## 4. Création des groupes globaux
-- Créer un groupe global
-
-```powershell
-New-ADGroup -Name "GG_Direction" -GroupScope Global -Path "OU=Services,OU=Groupes,OU=Mon entreprise,DC=homelab,DC=local"
-```
-- Créer plusieurs groupe globaux
-
-```powershell
-$Groups = "GG_Direction","GG_Comptabilité","GG_Sécrétariat","GG_Production","GG_Support"
-
-foreach ($g in $Groups) {
-    New-ADGroup -Name $g -GroupScope Global -Path "OU=Services,OU=Groupes,OU=Mon entreprise,DC=homelab,DC=local"
-}
-```
-- Ajouter un utilisateur à un groupe
-
-```powershell
-Add-ADGroupMember -Identity "GG_Direction" -Members utilisateur1
-```
-- Ajouter plusieurs utilisateurs à un groupe
-
-```powershell
-Add-ADGroupMember -Identity "GG_Production" -Members user1,user2,user3
-```
-
-## 5. Création des utilisateurs
+## 4. Création des utilisateurs
 - Créer un utilisateur
 
 ```powershell
@@ -117,6 +91,68 @@ Enable-ADAccount -Identity utilisateur1
 
 ```powershell
 Set-ADAccountPassword utilisateur1 -Reset -NewPassword (Read-Host -AsSecureString "Nouveau mot de passe")
+```
+
+## 5. Création des groupes globaux
+- Créer un groupe global
+
+```powershell
+New-ADGroup -Name "GG_Direction" -GroupScope Global -Path "OU=Services,OU=Groupes,OU=Mon entreprise,DC=homelab,DC=local"
+```
+- Créer plusieurs groupe globaux
+
+```powershell
+$Groups = "GG_Direction","GG_Comptabilité","GG_Sécrétariat","GG_Production","GG_Support"
+
+foreach ($g in $Groups) {
+    New-ADGroup -Name $g -GroupScope Global -Path "OU=Services,OU=Groupes,OU=Mon entreprise,DC=homelab,DC=local"
+}
+```
+- Ajouter un utilisateur à un groupe
+
+```powershell
+Add-ADGroupMember -Identity "GG_Direction" -Members utilisateur1
+```
+- Ajouter plusieurs utilisateurs à un groupe
+
+```powershell
+Add-ADGroupMember -Identity "GG_Production" -Members user1,user2,user3
+```
+
+## 5. Création des groupes de domaine local
+- Créer un groupe de domaine local
+
+```powershell
+New-ADGroup -Name "DL_DATA_RO" -GroupScope DomainLocal -Path "OU=Partages,OU=Groupes,OU=Mon entreprise,DC=homelab,DC=local"
+```
+- Créer plusieurs groupe de domaine local
+
+```powershell
+$groupNames = @(
+    "DL_DATA_RO", "DL_DATA_RW",
+    "DL_SERVICES_RO", "DL_SERVICES_RW",
+    "DL_DIRECTION_RO", "DL_DIRECTION_RW",
+    "DL_COMPTABILITE_RO", "DL_COMPTABILITE_RW",
+    "DL_SECRETARIAT_RO", "DL_SECRETARIAT_RW",
+    "DL_SUPPORT_RO", "DL_SUPPORT_RW",
+    "DL_PUBLIC_RO", "DL_PUBLIC_RW",
+    "DL_INFORMATIQUE_RO", "DL_INFORMATIQUE_RW"
+)
+
+foreach ($group in $groupNames) {
+        New-ADGroup -Name $group -GroupScope DomainLocal -Path "OU=Partages,OU=Groupes,OU=Mon entreprise,DC=homelab,DC=local"
+}
+```
+- Ajouter un groupe global à un groupe de domaine local
+
+```powershell
+Add-ADGroupMember -Identity "DL_DATA_RO" -Members "GG_Direction"
+```
+
+- Ajouter plusieurs globaux à un groupe de domaine local
+
+```powershell
+Add-ADGroupMember -Identity "DL_DATA_RO" -Members "GG_Direction","GG_Comptabilite","GG_Secretariat"
 ```
 
 ## 6. Automatisation
