@@ -72,20 +72,7 @@ Pour les machines serveurs du domaine.
 
 ---
 
-## 6. OU Utilisateurs
-
-### 6.1 OU *Utilisateurs*  
-Pour les utilisateurs finaux.
-
-### 6.2 OU *Administrateurs*  
-Pour les comptes administratifs.
-
-**Capture d’écran :**  
-![OU Utilisateurs](/admin-homelab/assets/capture/adds/ou_users.png)
-
----
-
-## 7. Arborescence complète attendue
+## 6. Arborescence complète attendue
 
 Voici l’arborescence complète :
 ```
@@ -100,8 +87,6 @@ Mon entreprise
 │   └── Serveurs
 │
 └── Utilisateurs
-    ├── Utilisateurs
-    └── Administrateurs
 ```
 
 **Capture d’écran :**  
