@@ -111,7 +111,7 @@ gpresult /h gpo-report.html
 
 ---
 
-# 🧭 8. Ordre d’application des GPO (LsPd)
+# 8. Ordre d’application des GPO (LsPd)
 
 Les GPO s'appliquent dans cet ordre :
 
@@ -129,7 +129,7 @@ La dernière GPO appliquée l’emporte, sauf si :
 
 ---
 
-# 🎯 9. Filtrage des GPO
+# 9. Filtrage des GPO
 
 ## 🔹 Par groupes de sécurité
 
@@ -139,7 +139,7 @@ La dernière GPO appliquée l’emporte, sauf si :
 
 ---
 
-# 📦 10. GPO recommandées pour un homelab Windows Server
+# 10. GPO recommandées pour un homelab Windows Server
 
 | Catégorie  | Nom GPO                   | Description                                  |
 |-----------|---------------------------|----------------------------------------------|
@@ -151,10 +151,8 @@ La dernière GPO appliquée l’emporte, sauf si :
 
 ---
 
-# ✔️ Étape suivante
+# Étape suivante
 
-➡️ Déploiement logiciel via **GPO Software Installation**  
-➡️ Intégration **GPO + AGDLP** pour les permissions par service  
-➡️ Mise en place d’un mappage dynamique des **partages SMB**
+➡️ Nous passons à la section **DNS**  
 
 ---
