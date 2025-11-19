@@ -144,15 +144,15 @@ La dernière GPO appliquée l’emporte, sauf si :
 
 ---
 
-# 10. GPO recommandées pour un homelab Windows Server
+# 10. GPO utilisées pour mon homelab
 
-| Catégorie  | Nom GPO                   | Description                                  |
+| Catégorie  | Nom GPO                   | Description                                 |
 |-----------|---------------------------|----------------------------------------------|
-| Sécurité  | GPO_MotDePasse_Securite   | Mots de passe, verrouillage local            |
-| Bureau    | GPO_Wallpaper_Entreprise  | Fond d'écran                                  |
-| Sécurité  | GPO_LockSession_10min     | Veille et verrouillage auto                  |
-| Scripts   | GPO_MapDrives             | Mappage automatique des lecteurs réseaux     |
-| Maintenance | GPO_CleanTemp           | Nettoyage du dossier Temp                    |
+| Sécurité  | Default Domain Policy     | Mots de passe (default Domain Policy)        |
+| Bureau    | GPO_Fond_Ecran            | Fond d'écran                                 |
+| Sécurité  | GPO_Verouillage_ecran     | Veille et verrouillage auto                  |
+| Scripts   | GPO_Map_Partages          | Mappage automatique des lecteurs réseaux     |
+| Scripts   | GPO_Map_Imprimantes       | Mappage automatique des imprimantes          |
 
 ---
 
