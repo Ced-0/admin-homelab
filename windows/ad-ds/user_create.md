@@ -115,7 +115,8 @@ Lorsque vous devez créer un utilisateur d’un service :
 ---
 
 ## 6. Tableau des utilisateurs par service
-```
+
+
 | Service              | Membres                                                |
 |----------------------|--------------------------------------------------------|
 | Direction            | Christian Hef, Pauline Atron, Pascaline Résident       |
@@ -123,7 +124,7 @@ Lorsque vous devez créer un utilisateur d’un service :
 | Secrétariat          | Cédric Ourrier, Sandrine Tandard, Aline Genda          |
 | Production           | Chloé Hâne, Ursule Sine, Denis Elais                   |
 | Support Informatique | Clément Lavier, Cédric Ambos, Elodie Cran              |
-```
+
 
 **Capture d’écran :**  
 ![Copie modèle](/admin-homelab/assets/capture/adds/all_users.png)
