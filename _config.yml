@@ -1,12 +1,10 @@
 title: "Mon Wiki Homelab"
 remote_theme: "pmarsceill/just-the-docs"
 
-highlighter: none
-
 # Permet des chemins simples (ex: /windows/)
 permalink: pretty
 
 # Active la recherche
 just_the_docs:
   search_enabled: true
-  extra_head: "prism.html"
+  
