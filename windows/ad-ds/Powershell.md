@@ -149,7 +149,7 @@ foreach ($group in $groupNames) {
 Add-ADGroupMember -Identity "DL_DATA_RO" -Members "GG_Direction"
 ```
 
-- Ajouter plusieurs globaux à un groupe de domaine local
+- Ajouter plusieurs groupe globaux à un groupe de domaine local
 
 ```powershell
 Add-ADGroupMember -Identity "DL_DATA_RO" -Members "GG_Direction","GG_Comptabilite","GG_Secretariat"
