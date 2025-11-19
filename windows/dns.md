@@ -155,7 +155,7 @@ demo.infra
 
 # Étape suivante
 
-➡️ La configuration du serveur Bind est dans la partie consacrée à Debian
+➡️ La configuration du serveur Bind est dans la partie consacrée à Debian  
 ➡️ Nous passons à la section **DHCP**
 
 ---
