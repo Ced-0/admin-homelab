@@ -1,0 +1,136 @@
+<h1 id="️-quest-ce-quun-serveur-dimpression-">🖨️ Qu’est-ce qu’un serveur d’impression ?</h1>
+
+<p>Un <strong>serveur d’impression</strong> centralise, gère et distribue les imprimantes au sein d’un réseau d’entreprise.<br />
+Il permet aux utilisateurs d’accéder facilement aux imprimantes tout en garantissant une gestion contrôlée, sécurisée et centralisée.</p>
+
+<h2 id="serveur-dimpression-sous-windows-permet-">Serveur d’impression sous Windows permet :</h2>
+
+<ul>
+  <li>l’installation et le partage d’imprimantes,</li>
+  <li>la gestion des files d’attente d’impression,</li>
+  <li>le déploiement d’imprimantes via GPO,</li>
+  <li>la gestion centralisée des pilotes d’impression,</li>
+  <li>la surveillance des impressions et des incidents.</li>
+</ul>
+
+<h2 id="serveur-dimpression-sous-linux-utilise-principalement-cups-common-unix-printing-system-et-permet-">Serveur d’impression sous Linux utilise principalement <strong>CUPS</strong> (Common Unix Printing System) et permet :</h2>
+<ul>
+  <li>l’installation et le partage d’imprimantes,</li>
+  <li>la gestion des files d’attente d’impression,</li>
+  <li>la configuration des droits d’accès aux imprimantes,</li>
+  <li>la gestion centralisée des pilotes et filtres d’impression,</li>
+  <li>la surveillance des travaux et des erreurs d’impression.</li>
+</ul>
+
+<hr />
+
+<h1 id="-concepts-clés-du-serveur-dimpression">🧱 Concepts clés du serveur d’impression</h1>
+
+<h3 id="-files-dimpression">📌 Files d’impression</h3>
+<p>Chaque imprimante partagée possède une <strong>file d’attente</strong> dans laquelle sont stockés les travaux d’impression avant leur envoi.</p>
+
+<p>Infos gérées par le serveur :</p>
+<ul>
+  <li>statut de l’imprimante (en ligne / hors ligne),</li>
+  <li>file d’attente,</li>
+  <li>priorité des impressions,</li>
+  <li>gestion des incidents (papier, toner…).</li>
+</ul>
+
+<h3 id="-pilotes-dimpression">📌 Pilotes d’impression</h3>
+<p>Les pilotes installés sur le serveur sont automatiquement propagés aux clients.</p>
+
+<p>Types :</p>
+<ul>
+  <li>Pilotes <strong>v4</strong> (modernes, plus sécurisés),</li>
+  <li>Pilotes <strong>Type 3</strong> (compatibilité),</li>
+  <li>Pilotes spécifiques constructeur (HP, Canon, Ricoh…).</li>
+</ul>
+
+<h3 id="-protocoles-utilisés">📌 Protocoles utilisés</h3>
+<ul>
+  <li><strong>SMB</strong> → partage des imprimantes via \SERVEUR\Imprimante</li>
+  <li><strong>IPP</strong> (Internet Printing Protocol)</li>
+  <li><strong>WSD</strong> (Web Services for Devices)</li>
+</ul>
+
+<h3 id="-déploiement-via-gpo">📌 Déploiement via GPO</h3>
+<p>Les imprimantes peuvent être déployées automatiquement selon :</p>
+<ul>
+  <li>les utilisateurs,</li>
+  <li>les groupes AD,</li>
+  <li>les unités organisationnelles (OU),</li>
+  <li>les ordinateurs.</li>
+</ul>
+
+<hr />
+
+<h1 id="-rôle-du-serveur-dimpression-dans-un-environnement-ad">🔐 Rôle du serveur d’impression dans un environnement AD</h1>
+
+<p>Dans une infrastructure Active Directory, un serveur d’impression permet :</p>
+
+<ul>
+  <li>l’attribution automatique d’imprimantes aux utilisateurs selon leur service,</li>
+  <li>la gestion des droits (lecture, gestion, suppression de jobs),</li>
+  <li>la centralisation des pilotes,</li>
+  <li>la standardisation du parc d’imprimantes,</li>
+  <li>la réduction des problèmes liés aux installations locales d’imprimantes.</li>
+</ul>
+
+<p>Print Server + AD =<br />
+➡️ déploiement propre et automatisé<br />
+➡️ administration facilitée<br />
+➡️ sécurité renforcée</p>
+
+<hr />
+
+<h2 id="-pourquoi-un-serveur-dimpression-est-indispensable-">🩺 Pourquoi un serveur d’impression est indispensable ?</h2>
+<ul>
+  <li>Centralisation des imprimantes au même endroit.</li>
+  <li>Gestion simplifiée pour les administrateurs.</li>
+  <li>Déploiement automatique sur les postes utilisateurs.</li>
+  <li>Contrôle des droits d’utilisation et des files.</li>
+  <li>Mises à jour de pilotes centralisées.</li>
+</ul>
+
+<hr />
+
+<h1 id="-ce-que-jai-déjà-réalisé-portfolio">📑 Ce que j’ai déjà réalisé (Portfolio)</h1>
+
+<h3 id="-travaux-effectués-sur-serveur-dimpression-windows-server">🔧 Travaux effectués sur serveur d’impression Windows Server</h3>
+
+<ul>
+  <li>Installation du rôle <strong>Print and Document Services</strong>.</li>
+  <li>Ajout et configuration d’imprimantes réseau (ports TCP/IP).</li>
+  <li>Partage d’imprimantes via SMB avec gestion des permissions.</li>
+  <li>Déploiement automatique d’imprimantes via <strong>GPO</strong>.</li>
+  <li>Tests d’impression avec utilisateurs et groupes Active Directory.</li>
+  <li>Gestion des files : suppression, priorités, incidents.</li>
+  <li>Vérification des droits via les ACL (Print, Manage Printers…).</li>
+  <li>Documentation du parc d’imprimantes et des pilotes utilisés.</li>
+</ul>
+
+<hr />
+
+<h1 id="️-bonnes-pratiques-pour-un-serveur-dimpression">🛠️ Bonnes pratiques pour un serveur d’impression</h1>
+
+<p><strong>Déployer les imprimantes via GPO</strong>
+Pas manuellement.</p>
+
+<p><strong>Créer une imprimante par service</strong>
+Lorsqu’il y a un risque de surcharge.</p>
+
+<p><strong>Utiliser des ports TCP/IP fixes</strong>
+Pas WSD (trop instable).</p>
+
+<p><strong>Séparer les permissions</strong> 
+Entre utilisateurs et administrateurs.</p>
+
+<p><strong>Activer l’audit d’impression</strong>
+Si traçabilité requise.</p>
+
+<p><strong>Documenter les modèles et pilotes utilisés</strong>
+Pour homogénéiser le parc.</p>
+
+<p><strong>Superviser les files d’impression</strong>
+Pour détecter blocages et pannes récurrentes.</p>

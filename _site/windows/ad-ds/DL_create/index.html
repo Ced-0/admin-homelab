@@ -1,0 +1,146 @@
+<h1 id="️-création-des-groupes-de-domaine-locaux-dl">🛡️ Création des Groupes de Domaine Locaux (DL)</h1>
+
+<p>Dans cette étape, nous créons les <strong>Groupes de Domaine Locaux (DL)</strong> associés directement aux <strong>dossiers partagés</strong> de l’infrastructure.<br />
+Ces groupes recevront les permissions NTFS/SMB qui seront ensuite attribuées aux <strong>Groupes Globaux (GG)</strong> selon la méthode <strong>AGDLP</strong>.</p>
+
+<hr />
+
+<h2 id="-dossiers-partagés-existants">📁 Dossiers partagés existants</h2>
+
+<p>Les partages configurés dans mon homelab sont :</p>
+
+<pre><code>DATA  *(Accès Lecture pour tout le monde)*
+│
+├── Services  *(Accès Lecture pour tout le monde)*
+│   ├── direction  *(Accès Modification pour la direction et comptabilité - Lecture pour les secrétaires)*
+│   ├── comptabilité  *(Accès Modification pour les comptables - Lecture pour la direction et les secrétaires)*
+│   ├── secrétariat  *(Accès Modification pour tous les secrétaires)*
+│   └── support  *(Accès Modification pour le support et les secrétaires - Lecture pour la direction)*
+│
+├── Public  *(Accès Modification pour tout le monde)*
+│
+└── Informatique  *(dossier et partage caché — Accès Modification pour le service informatique)*
+</code></pre>
+
+<p>Les DL créés correspondront exactement à ces dossiers.</p>
+
+<hr />
+
+<h1 id="1-convention-de-nommage-utilisée">1. Convention de nommage utilisée</h1>
+<pre><code>DL_&lt;NomDuDossier&gt;_&lt;Droit&gt;
+</code></pre>
+
+<hr />
+
+<h1 id="2-ouvrir-la-console-utilisateurs-et-ordinateurs-active-directory">2. Ouvrir la console Utilisateurs et ordinateurs Active Directory</h1>
+
+<ol>
+  <li>Ouvrir <strong>Outils d’administration</strong> → <strong>Utilisateurs et ordinateurs Active Directory</strong></li>
+  <li>Naviguer vers :<br />
+<strong>Mon entreprise → Groupes → Partages</strong></li>
+</ol>
+
+<p><strong>Capture d’écran :</strong><br />
+<img src="/admin-homelab/assets/capture/adds/groups_partages.png" alt="OU Partages" /></p>
+
+<hr />
+
+<h1 id="3-créer-un-groupe-de-domaine-local">3. Créer un groupe de domaine local</h1>
+
+<ol>
+  <li>Clic droit dans l’OU <strong>Partages</strong> → <strong>Nouveau</strong> → <strong>Groupe</strong></li>
+  <li>Renseigner :
+    <ul>
+      <li><strong>Nom du groupe :</strong> <code>DL_DATA_RO</code> <em>(exemple)</em></li>
+      <li><strong>Portée du groupe :</strong> Domaine local</li>
+      <li><strong>Type du groupe :</strong> Sécurité</li>
+    </ul>
+  </li>
+  <li>Cliquer sur <strong>OK</strong></li>
+</ol>
+
+<p><strong>Capture d’écran :</strong><br />
+<img src="/admin-homelab/assets/capture/adds/group_dl_new.png" alt="Créer DL" /></p>
+
+<hr />
+
+<h1 id="4-créer-tous-les-dl-correspondant-aux-partages">4. Créer tous les DL correspondant aux partages</h1>
+
+<p>Créer les groupes suivants dans l’OU <strong>Partages</strong> :</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dossier partagé</th>
+      <th>Groupe DL à créer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DATA</td>
+      <td><code>DL_DATA_RO</code>, <code>DL_DATA_RW</code></td>
+    </tr>
+    <tr>
+      <td>SERVICES</td>
+      <td><code>DL_SERVICES_RO</code>, <code>DL_SERVICES_RW</code></td>
+    </tr>
+    <tr>
+      <td>DIRECTION</td>
+      <td><code>DL_DIRECTION_RO</code>, <code>DL_DIRECTION_RW</code></td>
+    </tr>
+    <tr>
+      <td>COMPTABILITE</td>
+      <td><code>DL_COMPTABILITE_RO</code>, <code>DL_COMPTABILITE_RW</code></td>
+    </tr>
+    <tr>
+      <td>SECRETARIAT</td>
+      <td><code>DL_SECRETARIAT_RO</code>, <code>DL_SECRETARIAT_RW</code></td>
+    </tr>
+    <tr>
+      <td>SUPPORT</td>
+      <td><code>DL_SUPPORT_RO</code>, <code>DL_SUPPORT_RW</code></td>
+    </tr>
+    <tr>
+      <td>PUBLIC</td>
+      <td><code>DL_PUBLIC_RO</code>, <code>DL_PUBLIC_RW</code></td>
+    </tr>
+    <tr>
+      <td>INFORMATIQUE</td>
+      <td><code>DL_INFORMATIQUE_RO</code>, <code>DL_INFORMATIQUE_RW</code></td>
+    </tr>
+    <tr>
+      <td>UTILISATEURS</td>
+      <td><em>(pas de DL global — droits individuels)</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>⚠️ <strong>J’ai choisi de créer des groupes de Read-Only (RO) et Read-Write (RW)</strong> pour chaque dossier, assurant ainsi une <strong>standardisation des permissions</strong> à travers tous les répertoires.</p>
+
+<p>Cependant, <strong>ce n’est pas forcément nécessaire ni recommandé</strong>. On pourra se limiter au <strong>Domain Local (DL)</strong> strictement nécessaire en fonction de la politique de l’entreprise.</p>
+
+<p><strong>Capture d’écran :</strong><br />
+<img src="/admin-homelab/assets/capture/adds/groups_dl_list.png" alt="Liste DL" /></p>
+
+<hr />
+
+<h1 id="5-ajouter-les-groupes-globaux-gg-aux-dl">5. Ajouter les Groupes Globaux (GG) aux DL</h1>
+
+<ol>
+  <li>Ouvrir les propriétés du groupe DL (double-clic).</li>
+  <li>Onglet <strong>Membres</strong> → <strong>Ajouter</strong>.</li>
+  <li>Rechercher et ajouter le groupe global correspondant, par ex. <code>GG_Direction</code> dans <code>DL_DIRECTION_RW</code>.</li>
+  <li>Valider.</li>
+</ol>
+
+<p><strong>Capture d’écran :</strong><br />
+<img src="/admin-homelab/assets/capture/adds/add_gg.png" alt="Ajout GG" /></p>
+
+<hr />
+
+<h1 id="étape-suivante">Étape suivante</h1>
+
+<p>➡️ Associer chaque <strong>GG</strong> au <strong>DL</strong> correspondant (méthode AGDLP)<br />
+➡️ Appliquer les droits <strong>NTFS/SMB</strong> sur les dossiers partagés</p>
+
+<hr />

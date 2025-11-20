@@ -1,0 +1,80 @@
+<h1 id="-création-des-groupes-globaux-gg">👥 Création des Groupes Globaux (GG)</h1>
+
+<hr />
+
+<p>Dans cette étape, nous créons les <strong>Groupes Globaux (GG)</strong> utilisés pour représenter les services ou départements de l’entreprise.<br />
+Ces groupes seront ensuite utilisés dans la méthode <strong>AGDLP</strong> pour gérer les permissions.</p>
+
+<p>Les groupes à créer :</p>
+
+<ul>
+  <li><strong>GG_Direction</strong></li>
+  <li><strong>GG_Comptabilité</strong></li>
+  <li><strong>GG_Secrétariat</strong></li>
+  <li><strong>GG_Production</strong></li>
+  <li><strong>GG_Support_informatique</strong></li>
+</ul>
+
+<hr />
+
+<h2 id="1-ouvrir-la-console-utilisateurs-et-ordinateurs-active-directory">1. Ouvrir la console Utilisateurs et ordinateurs Active Directory</h2>
+
+<ol>
+  <li>Ouvrir <strong>Outils d’administration</strong> → <strong>Utilisateurs et ordinateurs Active Directory</strong>.</li>
+  <li>Naviguer vers :<br />
+<strong>Mon entreprise → Groupes → Services</strong></li>
+</ol>
+
+<p><strong>Capture d’écran :</strong><br />
+<img src="/admin-homelab/assets/capture/adds/groups_services.png" alt="ADUC Services" /></p>
+
+<hr />
+
+<h2 id="2-créer-un-groupe-global">2. Créer un groupe global</h2>
+
+<ol>
+  <li>Clic droit dans le volet central → <strong>Nouveau</strong> → <strong>Groupe</strong>.</li>
+  <li>Renseigner :
+    <ul>
+      <li><strong>Nom du groupe :</strong> par exemple <code>GG_Direction</code></li>
+      <li><strong>Portée du groupe :</strong> <em>Global</em></li>
+      <li><strong>Type de groupe :</strong> <em>Security</em></li>
+    </ul>
+  </li>
+  <li>Cliquer sur <strong>OK</strong>.</li>
+</ol>
+
+<p><strong>Capture d’écran :</strong><br />
+<img src="/admin-homelab/assets/capture/adds/group_new.png" alt="Créer groupe global" /></p>
+
+<hr />
+
+<h2 id="3-répéter-lopération-pour-chaque-service">3. Répéter l’opération pour chaque service</h2>
+
+<p>Créer les groupes suivants dans la même OU <strong>Services</strong> :</p>
+
+<ul>
+  <li><code>GG_Comptabilité</code></li>
+  <li><code>GG_Sécrétariat</code></li>
+  <li><code>GG_Production</code></li>
+  <li><code>GG_Support_informatique</code></li>
+</ul>
+
+<p><strong>Capture d’écran :</strong><br />
+<img src="/admin-homelab/assets/capture/adds/groups_list.png" alt="Liste groupes globaux" /></p>
+
+<hr />
+
+<h2 id="étape-suivante">Étape suivante</h2>
+
+<h2 id="étape-suivante-1">Étape suivante</h2>
+
+<p>➡️ Procéder à la <strong>création des utilisateurs</strong> dans l’OU <em>Utilisateurs</em><br />
+(une page dédiée décrira la procédure complète avec captures d’écran)</p>
+
+<p>Une fois les utilisateurs créés, nous passerons ensuite à :</p>
+
+<p>➡️ La création des <strong>Groupes de Domaine Locaux (DL)</strong> dans l’OU <em>Partages</em><br />
+➡️ Puis la mise en place de la méthode <strong>AGDLP</strong></p>
+
+<hr />

@@ -1,0 +1,211 @@
+<h1 id="-quest-ce-quun-serveur-de-fichiers-">📁 Qu’est-ce qu’un serveur de fichiers ?</h1>
+
+<hr />
+
+<p>Un <strong>serveur de fichiers</strong> est un serveur dédié au stockage, au partage et à la gestion des données d’une organisation.<br />
+Il permet aux utilisateurs d’accéder à des dossiers partagés de manière sécurisée, centralisée et organisée.</p>
+
+<hr />
+
+<h2 id="serveur-de-fichiers-sous-windows-server">Serveur de fichiers sous Windows Server</h2>
+
+<ul>
+  <li>Utilise principalement le protocole <strong>SMB (Server Message Block)</strong>.</li>
+  <li>Gestion des droits via les <strong>permissions NTFS</strong> et les <strong>partages SMB</strong>.</li>
+  <li>Fonctionnalités avancées : <strong>quotas (FSRM)</strong>, <strong>Shadow Copies</strong>, <strong>redirections de dossiers</strong>, etc.</li>
+  <li>Intégration avec Active Directory pour gérer les accès selon les groupes et utilisateurs.</li>
+  <li>Méthode recommandée pour les permissions : <strong>AGDLP</strong> (Ajouter à un Groupe, Groupe à un Domaine, etc.).</li>
+</ul>
+
+<h2 id="serveur-de-fichiers-sous-linux-debian">Serveur de fichiers sous Linux (Debian)</h2>
+
+<ul>
+  <li>Utilise souvent <strong>Samba</strong> pour offrir des partages SMB/CIFS compatibles Windows.</li>
+  <li>Peut également proposer des partages <strong>NFS</strong> pour un environnement Linux/Unix natif.</li>
+  <li>Gestion des permissions basée sur les droits Linux classiques (chmod, chown) en complément de la configuration Samba.</li>
+  <li>Authentification des utilisateurs Samba liée aux utilisateurs Linux, avec gestion spécifique via <code>smbpasswd</code>.</li>
+  <li>Configuration principale dans <code>/etc/samba/smb.conf</code>.</li>
+</ul>
+
+<hr />
+
+<h1 id="-concepts-clés-dun-serveur-de-fichiers-sous-windows-server">🧱 Concepts clés d’un serveur de fichiers sous windows server</h1>
+
+<h3 id="-permissions-de-partage">📌 Permissions de partage</h3>
+<p>S’appliquent au niveau du partage SMB.</p>
+
+<p>Niveaux classiques :</p>
+<ul>
+  <li><strong>Read</strong></li>
+  <li><strong>Change</strong></li>
+  <li><strong>Full Control</strong></li>
+</ul>
+
+<h3 id="-permissions-ntfs">📌 Permissions NTFS</h3>
+<p>Les permissions NTFS permettent de contrôler l’accès localement au système de fichiers.</p>
+
+<p>Principaux niveaux :</p>
+<ul>
+  <li><strong>Read</strong></li>
+  <li><strong>Write</strong></li>
+  <li><strong>Modify</strong></li>
+  <li><strong>Full Control</strong></li>
+</ul>
+
+<p>Propriétés importantes :</p>
+<ul>
+  <li>Permissions <strong>granulaires</strong>,</li>
+  <li>Héritage activable/désactivable,</li>
+  <li>Contrôle fin via l’<strong>ACL</strong> et les <strong>ACE</strong>.</li>
+</ul>
+
+<h3 id="-principe-dutilisation-de-la-méthode-agdlp">🧩 Principe d’utilisation de la méthode AGDLP</h3>
+
+<p>C’est la méthode recommandée par Microsoft :
+A → G → DL → P</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type de groupe</th>
+      <th>Contient</th>
+      <th>Utilisé pour</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>A</strong> : Accounts</td>
+      <td>Utilisateurs</td>
+      <td>Comptes d’utilisateurs</td>
+    </tr>
+    <tr>
+      <td><strong>G</strong> : Global Group</td>
+      <td>Membres du même domaine</td>
+      <td>Rôle ou fonction (ex : “Comptabilité”)</td>
+    </tr>
+    <tr>
+      <td><strong>DL</strong> : Domain Local Group</td>
+      <td>Groupes globaux ou universels</td>
+      <td>Attribution des droits sur la ressource</td>
+    </tr>
+    <tr>
+      <td><strong>P</strong> : Permissions</td>
+      <td>Ressource (NTFS, partage, etc.)</td>
+      <td>Droits effectifs</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Les utilisateurs sont membres d’un groupe global (GG).</li>
+  <li>Les groupes globaux sont membres d’un groupe de domaine local (DL).</li>
+  <li>
+    <p>Le DL reçoit les permissions sur la ressource.</p>
+
+    <p>💡 <strong>Règle d’or :</strong></p>
+    <blockquote>
+      <p>Les permissions effectives = le plus restrictif entre Share Permissions et NTFS.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h3 id="-structure-recommandée-pour-les-dossiers-partagés">📌 Structure recommandée pour les dossiers partagés</h3>
+<pre><code>D:\Services
+├── COMMUN
+├── IT
+├── RH
+├── FINANCE
+└── UTILISATEURS
+    ├── user1
+    ├── user2
+    └── user3
+</code></pre>
+
+<h3 id="-quotas-fsrm">📌 Quotas (FSRM)</h3>
+<p>Permettent de limiter l’espace disque par utilisateur ou par dossier.</p>
+
+<p>Types de quotas :</p>
+<ul>
+  <li>Quotas durs (bloquants)</li>
+  <li>Quotas souples (non bloquants, alertes)</li>
+</ul>
+
+<h3 id="-shadow-copies">📌 Shadow Copies</h3>
+<p>Permet la restauration de versions précédentes d’un fichier ou dossier.</p>
+
+<hr />
+
+<h1 id="-rôle-du-serveur-de-fichiers-dans-un-environnement-ad">🔐 Rôle du serveur de fichiers dans un environnement AD</h1>
+
+<p>Dans une infrastructure Active Directory, le serveur de fichiers garantit :</p>
+<ul>
+  <li>l’accès contrôlé aux dossiers selon les groupes AD,</li>
+  <li>la gestion centralisée des profils utilisateurs,</li>
+  <li>la mise en place de redirections de dossiers (Documents, Bureau…),</li>
+  <li>la gestion des dossiers communs de service,</li>
+  <li>le stockage organisés des données métier.</li>
+</ul>
+
+<p>Serveur de fichiers + AD =<br />
+➡️ gestion des droits cohérente<br />
+➡️ administration simplifiée<br />
+➡️ sécurité accrue</p>
+
+<hr />
+
+<h2 id="-pourquoi-un-serveur-de-fichiers-est-indispensable-">🩺 Pourquoi un serveur de fichiers est indispensable ?</h2>
+<ul>
+  <li>Centralisation et sécurisation des données.</li>
+  <li>Gestion fine des droits d’accès.</li>
+  <li>Sauvegarde et restauration facilitées.</li>
+  <li>Collaboration interne structurée.</li>
+  <li>Contrôle total sur les accès et modifications.</li>
+</ul>
+
+<hr />
+
+<h1 id="-ce-que-jai-déjà-réalisé-portfolio">📑 Ce que j’ai déjà réalisé (Portfolio)</h1>
+
+<h3 id="-travaux-effectués-sur-serveur-de-fichiers-windows-server">🔧 Travaux effectués sur serveur de fichiers Windows Server</h3>
+
+<ul>
+  <li>Création d’une arborescence professionnelle de dossiers partagés.</li>
+  <li>Mise en place de partages SMB avec permissions NTFS détaillées.</li>
+  <li>Configuration des droits via la méthode <strong>AGDLP</strong>.</li>
+  <li>Création et gestion de quotas via <strong>FSRM</strong>.</li>
+  <li>Mise en place de dossiers utilisateurs (Home Folders).</li>
+  <li>Gestion des redirections de dossiers via GPO.</li>
+  <li>Vérification des permissions effectives avec <code>Effective Access</code>.</li>
+  <li>Tests d’accès via comptes utilisateurs de test.</li>
+  <li>Documentation de la structure et des droits appliqués.</li>
+</ul>
+
+<hr />
+
+<h1 id="️-bonnes-pratiques-pour-un-serveur-de-fichiers">🛠️ Bonnes pratiques pour un serveur de fichiers</h1>
+
+<p><strong>Utiliser la méthode AGDLP</strong>
+Gestion propre des permissions.</p>
+
+<p><strong>Séparer Share Permissions (large) et NTFS (restrictif)</strong> 
+Administration claire.</p>
+
+<p><strong>Désactiver l’héritage</strong>
+Dans les dossiers sensibles (RH, utilisateurs…).</p>
+
+<p><strong>Créer une structure de dossiers claire</strong>
+Bien documentée.</p>
+
+<p><strong>Activer Shadow Copies</strong> 
+Permettre aux utilisateurs de restaurer leurs fichiers.</p>
+
+<p><strong>Mettre en place FSRM</strong>
+(quotas + filtrage de fichiers).</p>
+
+<p><strong>Éviter de donner Full Control aux utilisateurs</strong>
+Sauf cas exceptionnels.</p>
+
+<p><strong>Sauvegarder régulièrement les données</strong> 
+(Veeam, Windows Server Backup…).</p>
+
+<hr />

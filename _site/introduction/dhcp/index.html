@@ -1,0 +1,114 @@
+<h1 id="-dynamic-host-configuration-protocol-dhcp">🚦 Dynamic Host Configuration Protocol (DHCP)</h1>
+
+<hr />
+
+<p>Le <strong>Dynamic Host Configuration Protocol (DHCP)</strong> est un service réseau essentiel qui automatise l’attribution des adresses IP et d’autres paramètres réseau aux appareils d’un réseau local. Grâce à DHCP, les administrateurs évitent la configuration manuelle fastidieuse et réduisent les erreurs de configuration.</p>
+
+<p>Ce protocole facilite la gestion des réseaux, qu’ils soient petits (homelab, PME) ou très étendus (grandes entreprises), et garantit que chaque appareil obtient une adresse IP valide pour communiquer efficacement.</p>
+
+<hr />
+
+<h2 id="-rôle-du-dhcp-dans-un-réseau">📌 Rôle du DHCP dans un réseau</h2>
+
+<p>DHCP a plusieurs fonctions clés :</p>
+
+<ul>
+  <li><strong>Attribution automatique des adresses IP</strong> aux clients lors de leur connexion au réseau.</li>
+  <li><strong>Distribution d’autres informations importantes</strong> comme la passerelle par défaut, les serveurs DNS, les serveurs NTP, etc.</li>
+  <li><strong>Gestion dynamique</strong> des adresses IP, avec renouvellement, libération et réallocation selon les besoins.</li>
+  <li><strong>Prévention des conflits d’adresses IP</strong> grâce à une gestion centralisée.</li>
+</ul>
+
+<hr />
+
+<h2 id="-concepts-fondamentaux-du-dhcp">🧱 Concepts fondamentaux du DHCP</h2>
+
+<h3 id="1-bail-dhcp">1. Bail DHCP</h3>
+<p>Une adresse IP attribuée par DHCP est temporaire. Cette durée s’appelle le bail. Le client doit renouveler ce bail périodiquement pour conserver la même adresse.</p>
+
+<h3 id="2-plage-dadresses-scope">2. Plage d’adresses (Scope)</h3>
+<p>Le serveur DHCP gère une plage d’adresses IP qu’il peut attribuer aux clients. Cette plage est définie par l’administrateur et peut être segmentée selon les sous-réseaux.</p>
+
+<h3 id="3-options-dhcp">3. Options DHCP</h3>
+<p>En plus de l’adresse IP, DHCP transmet des informations comme :</p>
+
+<ul>
+  <li>La passerelle par défaut (default gateway)</li>
+  <li>Les serveurs DNS</li>
+  <li>Le nom de domaine</li>
+  <li>Les serveurs NTP</li>
+  <li>D’autres paramètres spécifiques</li>
+</ul>
+
+<h3 id="4-types-dattribution-dadresses">4. Types d’attribution d’adresses</h3>
+<ul>
+  <li><strong>Dynamique</strong> : attribution temporaire d’une adresse IP issue d’une plage définie.</li>
+  <li><strong>Statique (réservation)</strong> : attribution fixe d’une adresse IP à un client spécifique, basée sur son adresse MAC.</li>
+</ul>
+
+<hr />
+
+<h2 id="-dhcp-et-active-directory-vue-générale">🧩 DHCP et Active Directory (Vue générale)</h2>
+
+<p>Dans un environnement Windows Server, DHCP peut être intégré à Active Directory pour une gestion centralisée et sécurisée. Cela permet :</p>
+
+<ul>
+  <li>D’autoriser uniquement les serveurs DHCP reconnus dans le domaine.</li>
+  <li>D’assurer une coordination entre DHCP et DNS pour la mise à jour automatique des enregistrements.</li>
+  <li>De simplifier l’administration via les consoles Microsoft.</li>
+</ul>
+
+<hr />
+
+<h2 id="-dhcp-dans-un-environnement-hétérogène-windows-linux-homelab">🌍 DHCP dans un environnement hétérogène (Windows, Linux, Homelab)</h2>
+
+<p>DHCP est universel et disponible sur de nombreuses plateformes :</p>
+
+<ul>
+  <li><strong>Windows Server (Rôle DHCP Server)</strong></li>
+  <li><strong>Linux (isc-dhcp-server, dhcpd)</strong></li>
+  <li><strong>Routeurs et firewalls (pfSense, OPNsense)</strong></li>
+</ul>
+
+<hr />
+
+<h2 id="-pourquoi-dhcp-est-indispensable-">🩺 Pourquoi DHCP est indispensable ?</h2>
+
+<ul>
+  <li>Simplifie la gestion des adresses IP et réduit les erreurs humaines.</li>
+  <li>Permet une mobilité fluide des équipements (ordinateurs portables, smartphones).</li>
+  <li>Optimise l’utilisation des plages d’adresses IP.</li>
+  <li>Facilite l’intégration d’appareils temporaires ou nouveaux sur le réseau.</li>
+</ul>
+
+<hr />
+
+<h2 id="-ce-que-jai-réalisé-dans-mon-homelab-portfolio">📑 Ce que j’ai réalisé dans mon Homelab (Portfolio)</h2>
+
+<ul>
+  <li>Configuration d’un serveur DHCP pour distribuer automatiquement les IP.</li>
+  <li>Définition de plages d’adresses adaptées à mes sous-réseaux.</li>
+  <li>Mise en place de réservations DHCP pour des équipements critiques.</li>
+  <li>Coordination entre DHCP et DNS pour une résolution de noms efficace.</li>
+  <li>Tests d’attribution DHCP sur clients Windows et Linux.</li>
+</ul>
+
+<hr />
+
+<h2 id="️-bonnes-pratiques-dhcp">🛠️ Bonnes pratiques DHCP</h2>
+
+<p><strong>Définir des plages IP cohérentes</strong><br />
+Veiller à ne pas chevaucher les plages statiques et dynamiques pour éviter les conflits.</p>
+
+<p><strong>Mettre en place des réservations DHCP</strong><br />
+Attribuer des adresses fixes aux équipements importants (serveurs, imprimantes).</p>
+
+<p><strong>Sécuriser les serveurs DHCP</strong><br />
+Autoriser uniquement les serveurs DHCP fiables sur le réseau, notamment dans un environnement AD.</p>
+
+<p><strong>Surveiller les baux DHCP</strong><br />
+Contrôler régulièrement les adresses attribuées pour détecter d’éventuels problèmes.</p>
+
+<p><strong>Documenter la configuration</strong><br />
+Tenir à jour la documentation pour faciliter la maintenance et les évolutions.</p>
+

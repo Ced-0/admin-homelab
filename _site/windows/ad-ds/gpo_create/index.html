@@ -1,0 +1,210 @@
+<h1 id="️-gestion-des-gpo-group-policy-objects">🛡️ Gestion des GPO (Group Policy Objects)</h1>
+
+<p>Cette page décrit la création, la gestion et l’application des <strong>stratégies de groupe (GPO)</strong> dans un environnement Active Directory.<br />
+Les GPO permettent de configurer automatiquement les postes clients : sécurité, restrictions, déploiement de logiciels, scripts, configuration réseau, etc.</p>
+
+<hr />
+
+<h1 id="1-ouvrir-la-console-gestion-des-stratégies-de-groupe-gpmc">1. Ouvrir la console Gestion des stratégies de groupe (GPMC)</h1>
+
+<ol>
+  <li>Aller dans <strong>Outils d’administration</strong></li>
+  <li>Cliquer sur <strong>Gestion de la stratégie de groupe</strong></li>
+</ol>
+
+<p><img src="/admin-homelab/assets/capture/adds/gpmc_console.png" alt="Console GPMC" /></p>
+
+<hr />
+
+<h1 id="2-structure-des-gpo">2. Structure des GPO</h1>
+
+<p>Dans la console, on distingue :</p>
+
+<ul>
+  <li><strong>Objets de stratégie de groupe</strong> → contient toutes les GPO du domaine</li>
+  <li><strong>Forêt / Domaine / OU</strong> → où sont liées les GPO</li>
+  <li><strong>Filtres WMI / Sécurité</strong> → filtres d’application</li>
+</ul>
+
+<p><img src="/admin-homelab/assets/capture/adds/gpmc_structure.png" alt="Structure GPMC" /></p>
+
+<hr />
+
+<h1 id="3-créer-une-nouvelle-gpo">3. Créer une nouvelle GPO</h1>
+
+<ol>
+  <li>Clic droit sur l’OU cible</li>
+  <li>Sélectionner : <strong>Créer un objet GPO dans ce domaine et le lier ici</strong></li>
+  <li>Nommer la GPO (ex : <code>GPO_Verouillage_Ecran</code>)</li>
+</ol>
+
+<p><img src="/admin-homelab/assets/capture/adds/create_gpo.png" alt="Créer GPO" /></p>
+
+<hr />
+
+<h1 id="4-modifier-une-gpo">4. Modifier une GPO</h1>
+
+<ol>
+  <li>Clic droit sur la GPO → <strong>Modifier</strong></li>
+  <li>L’éditeur s’ouvre avec deux sections :</li>
+</ol>
+
+<h3 id="-configuration-ordinateur">🔧 Configuration ordinateur</h3>
+<p>Paramètres appliqués <strong>au poste</strong> avant ouverture de session.</p>
+
+<h3 id="-configuration-utilisateur">👤 Configuration utilisateur</h3>
+<p>Paramètres appliqués <strong>à l’utilisateur</strong>.</p>
+
+<p><img src="/admin-homelab/assets/capture/adds/edit_gpo.png" alt="Modifier GPO" /></p>
+
+<hr />
+
+<h1 id="5-exemple--verrouillage-automatique">5. Exemple : verrouillage automatique</h1>
+
+<ol>
+  <li>Éditer la GPO</li>
+  <li>Aller dans :<br />
+<code>Configuration utilisateur → Modèles d'administration → Panneau de configuration → Personnalisation</code></li>
+</ol>
+
+<p>Configurer :</p>
+
+<ul>
+  <li><strong>Activer l’écran de veille</strong> → <em>Activé</em></li>
+  <li><strong>Empêcher de modifié l’écran de veille</strong> → <em>Activé</em></li>
+  <li><strong>Dépassement du délai d’expiration de l’écran de veille</strong> → <em>600 secondes (10 min)</em> → <em>Activé</em></li>
+</ul>
+
+<p><img src="/admin-homelab/assets/capture/adds/screensaver.png" alt="Screensaver GPO" /></p>
+
+<hr />
+
+<h1 id="6-exemple--fond-décran-dentreprise">6. Exemple : fond d’écran d’entreprise</h1>
+
+<ol>
+  <li>
+    <p>Ajouter le fichier sur un partage :<br />
+<code>\\SRV-FIC\Outils$\GPO_Ressources\wallpaper.jpg</code></p>
+  </li>
+  <li>
+    <p>Modifier la GPO :<br />
+<code>Configuration utilisateur → Modèles d’administration → Bureau → Active Desktop</code></p>
+  </li>
+</ol>
+
+<p>Paramètres :</p>
+
+<ul>
+  <li><strong>Papier peint du Bureau</strong> : chemin UNC</li>
+  <li>Mode d’affichage : <em>Ajusté / Centré / Étendu</em></li>
+</ul>
+
+<p><img src="/admin-homelab/assets/capture/adds/wallpaper.png" alt="Wallpaper GPO" /></p>
+
+<hr />
+
+<h1 id="7-tester-les-gpo-sur-un-poste-windows">7. Tester les GPO sur un poste Windows</h1>
+
+<h3 id="forcer-la-mise-à-jour">Forcer la mise à jour</h3>
+<pre><code>gpupdate /force
+</code></pre>
+
+<h3 id="-vérifier-les-gpo-appliquées">📋 Vérifier les GPO appliquées</h3>
+<pre><code>gpresult /r
+</code></pre>
+
+<h3 id="rapport-html">Rapport HTML</h3>
+<pre><code>gpresult /h gpo-report.html
+</code></pre>
+
+<p><img src="/admin-homelab/assets/capture/adds/gpresult.png" alt="gpresult" /></p>
+
+<hr />
+
+<h1 id="8-ordre-dapplication-des-gpo-lspd">8. Ordre d’application des GPO (LsPd)</h1>
+
+<p>Les GPO s’appliquent dans cet ordre :</p>
+
+<ol>
+  <li><strong>L</strong>ocal</li>
+  <li><strong>S</strong>ite</li>
+  <li><strong>P</strong>arcours de domaine (Domaine)</li>
+  <li><strong>d</strong>‘OU (de la racine vers la feuille)</li>
+</ol>
+
+<p>La dernière GPO appliquée l’emporte, sauf si :</p>
+
+<ul>
+  <li><strong>Appliqué (Enforced)</strong> est activé</li>
+</ul>
+
+<p><img src="/admin-homelab/assets/capture/adds/inheritance1.png" alt="Héritage GPO" /></p>
+
+<ul>
+  <li>L’OU <strong>bloque l’héritage</strong></li>
+</ul>
+
+<p><img src="/admin-homelab/assets/capture/adds/inheritance2.png" alt="Héritage GPO" /></p>
+
+<hr />
+
+<h1 id="9-filtrage-des-gpo">9. Filtrage des GPO</h1>
+
+<h2 id="par-groupes-de-sécurité">Par groupes de sécurité</h2>
+
+<ol>
+  <li>Ouvrir <strong>Délégation / Sécurité</strong></li>
+  <li>Retirer <em>Authenticated Users</em></li>
+  <li>Ajouter un groupe (ex : <code>GG_Production</code>)</li>
+</ol>
+
+<p><img src="/admin-homelab/assets/capture/adds/filter_add.png" alt="Filtrage" /></p>
+
+<hr />
+
+<h1 id="10-gpo-utilisées-pour-mon-homelab">10. GPO utilisées pour mon homelab</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Catégorie</th>
+      <th>Nom GPO</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Sécurité</td>
+      <td>Default Domain Policy</td>
+      <td>Mots de passe (default Domain Policy)</td>
+    </tr>
+    <tr>
+      <td>Bureau</td>
+      <td>GPO_Fond_Ecran</td>
+      <td>Fond d’écran</td>
+    </tr>
+    <tr>
+      <td>Sécurité</td>
+      <td>GPO_Verouillage_ecran</td>
+      <td>Veille et verrouillage auto</td>
+    </tr>
+    <tr>
+      <td>Scripts</td>
+      <td>GPO_Map_Partages</td>
+      <td>Mappage automatique des lecteurs réseaux</td>
+    </tr>
+    <tr>
+      <td>Scripts</td>
+      <td>GPO_Map_Imprimantes</td>
+      <td>Mappage automatique des imprimantes</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h1 id="étape-suivante">Étape suivante</h1>
+
+<p>➡️ Nous passons à la section <strong>DNS</strong></p>
+
+<hr />

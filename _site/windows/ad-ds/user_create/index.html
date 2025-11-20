@@ -1,0 +1,192 @@
+<h1 id="-création-des-utilisateurs-active-directory">👤 Création des utilisateurs Active Directory</h1>
+
+<p>Cette procédure décrit la création des comptes utilisateurs dans l’OU <strong>Utilisateurs</strong> de l’arborescence AD.</p>
+
+<hr />
+
+<h1 id="-création-dun-modèle-dutilisateur-template-par-service">🧩 Création d’un modèle d’utilisateur (Template) par service</h1>
+
+<p>L’objectif est de créer un <strong>compte modèle</strong> pour chaque service.<br />
+Ce modèle contiendra :</p>
+<ul>
+  <li>l’appartenance au <strong>Groupe Global (GG)</strong> du service,</li>
+  <li>les informations de base du profil,</li>
+  <li>les paramètres préconfigurés (organisation, description…).</li>
+</ul>
+
+<p>Ensuite, chaque nouveau compte utilisateur du service sera créé par <strong>copie du modèle</strong>, ce qui garantit une configuration cohérente et rapide.</p>
+
+<hr />
+
+<h2 id="1-ouvrir-la-console-active-directory-users-and-computers">1. Ouvrir la console Active Directory Users and Computers</h2>
+
+<ol>
+  <li>Ouvrir <strong>Outils d’administration</strong> → <strong>Utilisateurs et ordinateurs Active Directory</strong></li>
+  <li>Naviguer vers :<br />
+<strong>Mon entreprise → Utilisateurs</strong></li>
+</ol>
+
+<p><strong>Capture d’écran :</strong><br />
+<img src="/admin-homelab/assets/capture/adds/users_console.png" alt="Console AD" /></p>
+
+<hr />
+
+<h2 id="2-créer-le-modèle-dutilisateur">2. Créer le modèle d’utilisateur</h2>
+
+<ol>
+  <li>Clic droit sur <strong>Utilisateurs</strong> → <strong>Nouveau</strong> → <strong>Utilisateur</strong></li>
+  <li>Nommer le modèle selon le service, par exemple :<br />
+<strong>modele_direction</strong></li>
+</ol>
+
+<p><strong>Capture d’écran :</strong><br />
+<img src="/admin-homelab/assets/capture/adds/user_template1.png" alt="Créer modèle AD" /></p>
+
+<ol>
+  <li>Définir un mot de passe simple et cocher :
+    <ul>
+      <li><strong>Le mot de passe n’expire jamais</strong></li>
+      <li><strong>L’utilisateur ne peut pas changer son mot de passe</strong></li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Capture d’écran :</strong><br />
+<img src="/admin-homelab/assets/capture/adds/user_template2.png" alt="Créer modèle AD" /></p>
+
+<blockquote>
+  <p>Ce compte modèle <strong>ne doit jamais servir à se connecter</strong> : il sert uniquement de structure.</p>
+</blockquote>
+
+<hr />
+
+<h2 id="3-ajouter-le-modèle-au-groupe-global-du-service">3. Ajouter le modèle au Groupe Global du service</h2>
+
+<ol>
+  <li>Ouvrir les propriétés du compte <strong>modele_direction</strong></li>
+</ol>
+
+<p><strong>Capture d’écran :</strong><br />
+<img src="/admin-homelab/assets/capture/adds/user_add_group1.png" alt="Ajouter au GG" /></p>
+
+<ol>
+  <li>
+    <p>Aller dans l’onglet <strong>Membre de</strong></p>
+  </li>
+  <li>
+    <p>Ajouter :</p>
+    <ul>
+      <li><strong>GG_Direction</strong></li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Capture d’écran :</strong><br />
+<img src="/admin-homelab/assets/capture/adds/user_add_group2.png" alt="Ajouter au GG" /></p>
+
+<hr />
+
+<h2 id="4-répéter-pour-les-autres-services">4. Répéter pour les autres services</h2>
+
+<p>Créer les modèles suivants :</p>
+
+<ul>
+  <li><strong>modele_comptabilite</strong> → membre de <strong>GG_Comptabilité</strong></li>
+  <li><strong>modele_secretariat</strong> → membre de <strong>GG_Sécrétariat</strong></li>
+  <li><strong>modele_production</strong> → membre de <strong>GG_Production</strong></li>
+  <li><strong>modele_support</strong> → membre de <strong>GG_Support_informatique</strong></li>
+</ul>
+
+<blockquote>
+  <p>Tous les modèles sont placés dans :<br />
+<strong>Mon entreprise → Utilisateurs</strong></p>
+</blockquote>
+
+<p><strong>Capture d’écran :</strong><br />
+<img src="/admin-homelab/assets/capture/adds/user_models.png" alt="Liste modèles" /></p>
+
+<hr />
+
+<h2 id="5-utiliser-un-modèle-pour-créer-un-nouvel-utilisateur">5. Utiliser un modèle pour créer un nouvel utilisateur</h2>
+
+<p>Lorsque vous devez créer un utilisateur d’un service :</p>
+
+<ol>
+  <li>Clic droit sur <strong>modele_direction</strong> → <strong>Copier</strong></li>
+</ol>
+
+<p><strong>Capture d’écran :</strong><br />
+<img src="/admin-homelab/assets/capture/adds/user_copy1.png" alt="Copie modèle" /></p>
+
+<ol>
+  <li>Renseigner les informations du nouvel employé :
+    <ul>
+      <li>Nom</li>
+      <li>Prénom</li>
+      <li>Nom d’ouverture de session</li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Capture d’écran :</strong><br />
+<img src="/admin-homelab/assets/capture/adds/user_copy2.png" alt="Copie modèle" /></p>
+
+<ol>
+  <li>L’appartenance au groupe <strong>GG_Direction</strong> sera automatiquement copiée</li>
+  <li>Définir un mot de passe temporaire</li>
+  <li>Cocher :
+    <ul>
+      <li><strong>L’utilisateur doit changer le mot de passe à la prochaine ouverture de session</strong></li>
+    </ul>
+  </li>
+</ol>
+
+<p><strong>Capture d’écran :</strong><br />
+<img src="/admin-homelab/assets/capture/adds/user_copy3.png" alt="Copie modèle" /></p>
+
+<hr />
+
+<h2 id="6-tableau-des-utilisateurs-par-service">6. Tableau des utilisateurs par service</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Service</th>
+      <th>Membres</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Direction</td>
+      <td>Christian Hef, Pauline Atron, Pascaline Résident</td>
+    </tr>
+    <tr>
+      <td>Comptabilité</td>
+      <td>Bruno Ilan, Christelle Rédit, Florence Acture</td>
+    </tr>
+    <tr>
+      <td>Secrétariat</td>
+      <td>Cédric Ourrier, Sandrine Tandard, Aline Genda</td>
+    </tr>
+    <tr>
+      <td>Production</td>
+      <td>Chloé Hâne, Ursule Sine, Denis Elais</td>
+    </tr>
+    <tr>
+      <td>Support Informatique</td>
+      <td>Clément Lavier, Cédric Ambos, Elodie Cran</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Capture d’écran :</strong><br />
+<img src="/admin-homelab/assets/capture/adds/all_users.png" alt="Copie modèle" /></p>
+
+<hr />
+
+<h2 id="étape-suivante">Étape suivante</h2>
+
+<p>➡️ Création des <strong>Groupes de Domaine Locaux (DL)</strong> et attribution des permissions<br />
+➡️ Structuration des partages et mise en place de <strong>AGDLP</strong></p>
+
+<hr />
