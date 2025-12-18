@@ -33,7 +33,7 @@ Ce déploiement permet d'étudier un environnement **DNS mixte** (Linux / Window
 | **SRV-AD01**  | Redirecteur conditionnel        | Win 2022   | 10.20.0.10  |
 
 **Diagramme logique DNS :**  
-![Diagramme DNS demo.infra](images/dns-demo-infra.png)
+![Diagramme DNS demo.infra](/admin-homelab/images/dns-demo-infra.png)
 
 ---
 
@@ -56,7 +56,7 @@ La zone est **entièrement gérée sur BIND**, puis reproduite telle quelle sur 
 - Création du fichier de zone  
 - Vérification de la configuration (`named-checkconf` / `named-checkzone`)
 
-![Zone Bind](/admin.homelab/assets/images/zone-bind.png)
+![Zone Bind](/admin-homelab/assets/images/zone-bind.png)
 
 ---
 
@@ -68,7 +68,7 @@ La zone est **entièrement gérée sur BIND**, puis reproduite telle quelle sur 
 - Validation du transfert de zone AXFR  
 - Vérification de la réplication automatique
 
-![Windows DNS secondaire](/admin.homelab/assets/images/windows-dns.png)
+![Windows DNS secondaire](/admin-homelab/assets/images/windows-dns.png)
 
 ---
 
@@ -82,7 +82,7 @@ Cible : 10.30.0.10 (SRV-DNS01)
 Résultat :  
 ➡️ Tout ce qui concerne `demo.infra` est envoyé **exclusivement** vers BIND.
 
-![Redirecteur conditionnel](/admin.homelab/assets/images/windows-dns-redirecteur.png)
+![Redirecteur conditionnel](/admin-homelab/assets/images/windows-dns-redirecteur.png)
 ---
 
 ### 🔹 Validation & supervision
@@ -92,12 +92,12 @@ Résultat :
   - Les serveurs AD délèguent la résolution via redirecteur  
   - BIND reste la **source d’autorité**  
 
-![Test nslookup](/admin.homelab/assets/images/dns-nslookup.png)
+![Test nslookup](/admin-homelab/assets/images/dns-nslookup.png)
 
 ---
 
 ## 📄 Documentation complémentaire
 
-[DNS Mixte – PDF](/admin.homelab/assets/pdfs/dns-mixte.pdf)
+[DNS Mixte – PDF](/admin-homelab/assets/pdfs/dns-mixte.pdf)
 
 ---

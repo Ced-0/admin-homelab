@@ -38,7 +38,7 @@ La solution permet une gestion centralisée du chiffrement, un contrôle complet
 - `https://mail.nebulo.games/Microsoft-Server-ActiveSync`
 
 **Diagramme logique :**  
-![Reverse Proxy Exchange](/admin.homelab/assets/images/exchange-reverseproxy.png)
+![Reverse Proxy Exchange](/admin-homelab/assets/images/exchange-reverseproxy.png)
 
 ---
 
@@ -48,13 +48,13 @@ La solution permet une gestion centralisée du chiffrement, un contrôle complet
 Installation d’un serveur Nginx dédié dans la DMZ pour traiter l’ensemble du trafic HTTPS entrant vers **mail.nebulo.games**.  
 Durcissement de la configuration TLS, activation des headers de sécurité et limitation des flux HTTP(S) autorisés.
 
-![Déploiement Nginx](/admin.homelab/assets/images/nginx-deployment.png)
+![Déploiement Nginx](/admin-homelab/assets/images/nginx-deployment.png)
 
 ### 🔹 Gestion des certificats public/privé
 Importation du certificat SSL correspondant à **mail.nebulo.games**.  
 Configuration du serveur virtuel Nginx en mode *TLS offloading* pour centraliser le chiffrement.
 
-![Certificat Nginx](/admin.homelab/assets/images/nginx-certificate.png)
+![Certificat Nginx](/admin-homelab/assets/images/nginx-certificate.png)
 
 ### 🔹 Routage des services Exchange
 Configuration précise des règles Nginx pour router les différentes URL Exchange vers **SRV-EXCH01** :  
@@ -63,7 +63,7 @@ Configuration précise des règles Nginx pour router les différentes URL Exchan
 - ActiveSync / EWS  
 - MAPI over HTTP  
 
-![Routage Nginx Exchange](/admin.homelab/assets/images/nginx-exchange-routing.png)
+![Routage Nginx Exchange](/admin-homelab/assets/images/nginx-exchange-routing.png)
 
 ### 🔹 Sécurisation et filtrage
 Application des protections côté reverse proxy :  
@@ -72,7 +72,7 @@ Application des protections côté reverse proxy :
 - Protection brute-force basique sur OWA/ECP  
 - Filtrage User-Agent et limitation des méthodes HTTP  
 
-![Sécurisation Nginx](/admin.homelab/assets/images/nginx-security.png)
+![Sécurisation Nginx](/admin-homelab/assets/images/nginx-security.png)
 
 ---
 
@@ -99,4 +99,4 @@ Application des protections côté reverse proxy :
 
 ## 📎 Ressources associées
 
-[exchange-reverseproxy-deployment.pdf](/admin.homelab/assets/pdfs/exchange-reverseproxy-deployment.pdf)
+[exchange-reverseproxy-deployment.pdf](/admin-homelab/assets/pdfs/exchange-reverseproxy-deployment.pdf)

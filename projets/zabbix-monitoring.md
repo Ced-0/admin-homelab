@@ -34,7 +34,7 @@ Cette page décrit le déploiement de **Zabbix** pour la supervision complète d
 | PfSense         | SNMP / Monitoring        | VLAN 10/70       |
 
 **Diagramme logique supervision Zabbix :**  
-![Diagramme Zabbix](images/zabbix-architecture.png)
+![Diagramme Zabbix](/admin-homelab/images/zabbix-architecture.png)
 
 ---
 
@@ -82,10 +82,10 @@ Cette page décrit le déploiement de **Zabbix** pour la supervision complète d
 
 ## 🖼️ Placeholder image / screenshot Zabbix
 
-![Zabbix Dashboard](images/zabbix-dashboard.png)
+![Zabbix Dashboard](/admin-homelab/images/zabbix-dashboard.png)
 
 ---
 
 ## 📄 Placeholder PDF ou capture finale Zabbix
 
-[zabbix-monitoring.pdf](pdfs/zabbix-monitoring.pdf)
+[zabbix-monitoring.pdf](/admin-homelab/pdfs/zabbix-monitoring.pdf)

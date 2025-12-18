@@ -32,7 +32,7 @@ Cette page décrit la mise en place de la **stratégie de sauvegarde** pour tous
 | SRV-AD01 / SRV-AD02    | System State / Veeam | VLAN 90     | Sauvegarde des contrôleurs de domaine |
 
 **Diagramme logique Backup :**  
-![Diagramme Backup](images/backup-architecture.png)
+![Diagramme Backup](/admin-homelab/images/backup-architecture.png)
 
 ---
 
@@ -75,10 +75,10 @@ Cette page décrit la mise en place de la **stratégie de sauvegarde** pour tous
 
 ## 🖼️ Placeholder image / screenshot Backup
 
-![Backup Dashboard](images/backup-dashboard.png)
+![Backup Dashboard](/admin-homelab/images/backup-dashboard.png)
 
 ---
 
 ## 📄 Placeholder PDF ou capture finale Backup
 
-[backup-strategy.pdf](pdfs/backup-strategy.pdf)
+[backup-strategy.pdf](/admin-homelab/pdfs/backup-strategy.pdf)

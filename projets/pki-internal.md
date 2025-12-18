@@ -29,7 +29,7 @@ Cette page décrit le déploiement d'une **infrastructure PKI interne** pour le 
 | Postes clients | Distribution des certificats via AD | VLAN 40 (Clients) |
 
 **Diagramme logique PKI :**  
-![Diagramme PKI](/admin.homelab/assets/images/pki-internal.png)
+![Diagramme PKI](/admin-homelab/assets/images/pki-internal.png)
 
 ---
 
@@ -40,7 +40,7 @@ Cette page décrit le déploiement d'une **infrastructure PKI interne** pour le 
 - Sélection de **Enterprise CA** et **Root CA**  
 - Configuration de la durée de vie de la CA et du stockage des certificats  
 
-![Installation AD CS](/admin.homelab/assets/images/pki-install.png)
+![Installation AD CS](/admin-homelab/assets/images/pki-install.png)
 
 ---
 
@@ -48,7 +48,7 @@ Cette page décrit le déploiement d'une **infrastructure PKI interne** pour le 
 - Publication du **certificat racine** dans l’AD  
 - Vérification de la distribution automatique aux postes clients et serveurs  
 
-![Publication certificat AD](/admin.homelab/assets/images/pki-publish.png)
+![Publication certificat AD](/admin-homelab/assets/images/pki-publish.png)
 
 ---
 
@@ -57,7 +57,7 @@ Cette page décrit le déploiement d'une **infrastructure PKI interne** pour le 
 - Délivrance des certificats aux serveurs et postes concernés  
 - Test de validité et vérification des dates d’expiration  
 
-![Templates et certificats](/admin.homelab/assets/images/pki-templates.png)
+![Templates et certificats](/admin-homelab/assets/images/pki-templates.png)
 
 ---
 
@@ -66,7 +66,7 @@ Cette page décrit le déploiement d'une **infrastructure PKI interne** pour le 
 - Sauvegarde de la CA et des clés privées dans un emplacement sécurisé  
 - Supervision des logs pour détecter erreurs ou certificats expirés  
 
-![Maintenance PKI](/admin.homelab/assets/images/pki-maintenance.png)
+![Maintenance PKI](/admin-homelab/assets/images/pki-maintenance.png)
 
 ---
 
@@ -75,9 +75,9 @@ Cette page décrit le déploiement d'une **infrastructure PKI interne** pour le 
 - Les postes clients récupèrent automatiquement le certificat racine  
 - Les certificats des serveurs sont valides et conformes aux templates  
 
-![Vérification PKI](/admin.homelab/assets/images/pki-verification.png)
+![Vérification PKI](/admin-homelab/assets/images/pki-verification.png)
 
 ---
 
 ### 🔹 Documentation complémentaire
-[PKI Documentation PDF](pdfs/pki-internal.pdf)
+[PKI Documentation PDF](/admin-homelab/pdfs/pki-internal.pdf)

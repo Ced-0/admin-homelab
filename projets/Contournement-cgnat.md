@@ -30,7 +30,7 @@ Pour contourner cette limitation, un **VPS public** a été utilisé comme point
 | SRV-EXCH01           | Exchange interne                          | LAN           |
 
 **Diagramme logique :**  
-![Architecture CGNAT / VPS / Mailgun](/admin.homelab/assets/images/cgnat-vps-architecture.png)
+![Architecture CGNAT / VPS / Mailgun](/admin-homelab/assets/images/cgnat-vps-architecture.png)
 
 ---
 
@@ -44,7 +44,7 @@ Installation des services nécessaires :
 - WireGuard  
 - Application Python (Flask + Gunicorn)  
 
-![VPS Network / WireGuard](/admin.homelab/assets/images/vps-wireguard-status.png)
+![VPS Network / WireGuard](/admin-homelab/assets/images/vps-wireguard-status.png)
 
 ---
 
@@ -55,7 +55,7 @@ Configuration d’un tunnel chiffré permettant d’acheminer :
 - les mails sortants Exchange via le relais VPS  
 - les flux complémentaires HTTPS si nécessaire
 
-![WireGuard Config](/admin.homelab/assets/images/wireguard-config.png)
+![WireGuard Config](/admin-homelab/assets/images/wireguard-config.png)
 
 ---
 
@@ -69,7 +69,7 @@ Pour contourner le CGNAT, une règle de routage et de NAT a été mise en place 
 
 Ce mécanisme permet à Exchange d'envoyer des mails externes via une IP publique valable.
 
-![Redirection SMTP VPS](/admin.homelab/assets/images/vps-smtp-nat.png)
+![Redirection SMTP VPS](/admin-homelab/assets/images/vps-smtp-nat.png)
 
 ---
 
@@ -80,7 +80,7 @@ Une application Python (Flask) reçoit les données, reconstruit l’email et l�
 
 Le service est exécuté via Gunicorn + systemd.
 
-![Python Gunicorn Service](/admin.homelab/assets/images/mailgun-gunicorn.png)
+![Python Gunicorn Service](/admin-homelab/assets/images/mailgun-gunicorn.png)
 
 ---
 
@@ -88,7 +88,7 @@ Le service est exécuté via Gunicorn + systemd.
 
 Les emails sont transmis via WireGuard en SMTP vers Exchange Edge Transport, qui les traite ensuite normalement via EdgeSync.
 
-![Exchange Edge Mail Flow](/admin.homelab/assets/images/exchange-edge-mailflow.png)
+![Exchange Edge Mail Flow](/admin-homelab/assets/images/exchange-edge-mailflow.png)
 
 ---
 
@@ -115,5 +115,5 @@ Les emails sont transmis via WireGuard en SMTP vers Exchange Edge Transport, qui
 
 ## 📎 Ressources associées
 
-[mailgun-webhook-code.py](/admin.homelab/assets/files/mailgun-webhook-code.py)  
-[cgnat-vps-mailflow.pdf](/admin.homelab/assets/pdfs/cgnat-vps-mailflow.pdf)
+[mailgun-webhook-code.py](/admin-homelab/assets/files/mailgun-webhook-code.py)  
+[cgnat-vps-mailflow.pdf](/admin-homelab/assets/pdfs/cgnat-vps-mailflow.pdf)

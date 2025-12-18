@@ -35,7 +35,7 @@ Le rôle Edge est isolé dans une **DMZ**, ne rejoint pas le domaine Active Dire
 - Isolation complète en DMZ  
 
 **Diagramme logique Exchange Edge :**  
-![Diagramme logique Exchange Edge](/admin.homelab/assets/images/exchange-edge-diagram.png)
+![Diagramme logique Exchange Edge](/admin-homelab/assets/images/exchange-edge-diagram.png)
 
 ---
 
@@ -45,25 +45,25 @@ Le rôle Edge est isolé dans une **DMZ**, ne rejoint pas le domaine Active Dire
 - Mise en place du serveur **Windows Server 2022** dédié au rôle Edge, configuré sur le VLAN DMZ et isolé du domaine conformément aux bonnes pratiques Exchange.  
 - Configuration réseau, durcissement de l’hôte et ouverture des flux strictement nécessaires.
 
-![Préparation serveur Edge](/admin.homelab/assets/images/exchange-edge-prep.png)
+![Préparation serveur Edge](/admin-homelab/assets/images/exchange-edge-prep.png)
 
 ### 🔹 Déploiement du rôle Edge Transport
 - Installation du rôle **Exchange Edge Transport**, application des mises à jour et validation des services de transport.  
 - Activation des modules anti-spam intégrés au rôle.
 
-![Installation Edge Transport](/admin.homelab/assets/images/exchange-edge-install.png)
+![Installation Edge Transport](/admin-homelab/assets/images/exchange-edge-install.png)
 
 ### 🔹 Mise en place du routage et de la synchronisation
 - Création et importation de la **Edge Subscription** permettant la synchronisation sécurisée avec Exchange interne.  
 - Mise en place des connecteurs SMTP pour l’acheminement entrant/sortant et configuration du chiffrement **TLS SMTP**.
 
-![Edge Subscription et Routage](/admin.homelab/assets/images/exchange-edge-subscription.png)
+![Edge Subscription et Routage](/admin-homelab/assets/images/exchange-edge-subscription.png)
 
 ### 🔹 Renforcement de la sécurité
 - Application des restrictions firewall, isolation totale en DMZ. 
 - Validation des mécanismes de filtrage et du comportement anti-spam.
 
-![Sécurisation Edge Transport](/admin.homelab/assets/images/exchange-edge-security.png)
+![Sécurisation Edge Transport](/admin-homelab/assets/images/exchange-edge-security.png)
 
 ---
 
@@ -90,5 +90,5 @@ Le rôle Edge est isolé dans une **DMZ**, ne rejoint pas le domaine Active Dire
 
 ## 📎 Ressources associées
 
-[exchange-edge-deployment.pdf](/admin.homelab/assets/pdfs/exchange-edge-deployment.pdf)
+[exchange-edge-deployment.pdf](/admin-homelab/assets/pdfs/exchange-edge-deployment.pdf)
 

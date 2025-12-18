@@ -38,7 +38,7 @@ Cette page décrit la **segmentation logique du réseau** pour le lab Hyper-V. C
 
 ## 🌐 Diagramme logique VLAN
 
-![Diagramme VLAN](images/vlan-diagram.png)
+![Diagramme VLAN](/admin-homelab/images/vlan-diagram.png)
 
 ## 🔧 Notes de configuration
 

@@ -39,7 +39,7 @@ Les accès **OWA** et **Autodiscover** seront également publiés via un **rever
 **Accès interne :** `https://mail.nebulo.games/owa`
 
 **Diagramme logique Exchange interne :**  
-![Diagramme Exchange interne](/admin.homelab/assets/images/exchange-internal.png)
+![Diagramme Exchange interne](/admin-homelab/assets/images/exchange-internal.png)
 
 ---
 
@@ -50,28 +50,28 @@ Les accès **OWA** et **Autodiscover** seront également publiés via un **rever
 - Préparation AD et vérification DNS  
 - Configuration du stockage destiné aux bases Exchange
 
-![Préparation du serveur Exchange](/admin.homelab/assets/images/exchange-preparation.png)
+![Préparation du serveur Exchange](/admin-homelab/assets/images/exchange-preparation.png)
 
 ### 🔹 Installation Exchange
 - Déploiement d’Exchange 2019 en rôle Mailbox  
 - Mise en place de la base de données et du stockage dédié    
 - Configuration des services internes (OWA, ECP, Autodiscover)  
 
-![Exchange Installation](/admin.homelab/assets/images/exchange-installation.png)
+![Exchange Installation](/admin-homelab/assets/images/exchange-installation.png)
 
 ### 🔹 Intégration PKI interne
 - Délivrance d’un certificat SSL via la PKI interne  
 - Application du certificat aux services IIS  
 - Vérification de la reconnaissance par les postes clients
 
-![Certificat PKI Exchange](/admin.homelab/assets/images/exchange-pki.png)
+![Certificat PKI Exchange](/admin-homelab/assets/images/exchange-pki.png)
 
 ### 🔹 Gestion des boîtes aux lettres
 - Création des boîtes pour les utilisateurs internes  
 - Application des quotas et stratégies locales  
 - Organisation des boîtes dans la base dédiée
 
-![Gestion Boîtes Exchange](/admin.homelab/assets/images/exchange-mailboxes.png)
+![Gestion Boîtes Exchange](/admin-homelab/assets/images/exchange-mailboxes.png)
 
 ### 🔹 Préparation pour la DMZ
 - Vérification du fonctionnement SMTP interne  
@@ -104,4 +104,4 @@ Les accès **OWA** et **Autodiscover** seront également publiés via un **rever
 
 ## 📎 Ressources associées
 
-[exchange-deployment.pdf](/admin.homelab/assets/pdfs/exchange-deployment.pdf)
+[exchange-deployment.pdf](/admin-homelab/assets/pdfs/exchange-deployment.pdf)

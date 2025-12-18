@@ -33,7 +33,7 @@ Cette page décrit la mise en place d’une infrastructure de **centralisation d
 | PfSense         | Firewall / VLAN routing  | VLAN 10/70       |
 
 **Diagramme logique Syslog :**  
-![Diagramme Syslog](images/syslog-architecture.png)
+![Diagramme Syslog](/admin-homelab/images/syslog-architecture.png)
 
 ---
 
@@ -74,10 +74,10 @@ Cette page décrit la mise en place d’une infrastructure de **centralisation d
 
 ## 🖼️ Placeholder image / screenshot Syslog
 
-![Syslog Dashboard](images/syslog-dashboard.png)
+![Syslog Dashboard](/admin-homelab/images/syslog-dashboard.png)
 
 ---
 
 ## 📄 Placeholder PDF ou capture finale Syslog
 
-[syslog-deployment.pdf](pdfs/syslog-deployment.pdf)
+[syslog-deployment.pdf](/admin-homelab/pdfs/syslog-deployment.pdf)

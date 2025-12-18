@@ -60,7 +60,7 @@ Cette infrastructure a pour objectif de fournir un réseau **segmenté, sécuris
 - Préparation pour l’intégration future : VPN, DMZ, supervision, sauvegardes…
 
 ## 📸 Interface & supervision
-![PfSense Dashboard](/admin.homelab/assets/images/pfsense-dashboard.png)
+![PfSense Dashboard](/admin-homelab/assets/images/pfsense-dashboard.png)
 
 ## ✅ Vérification
 - Vérifier que les VLANs sont correctement créés et accessibles selon le plan IP
@@ -68,6 +68,6 @@ Cette infrastructure a pour objectif de fournir un réseau **segmenté, sécuris
 - Capturer les logs PfSense pour valider les interfaces et le routage
 
 ## 📄 Documentation complémentaire
-[pfsense-configuration.pdf](/admin.homelab/assets/pdfs/pfsense-configuration.pdf)
+[pfsense-configuration.pdf](/admin-homelab/assets/pdfs/pfsense-configuration.pdf)
 
 ---

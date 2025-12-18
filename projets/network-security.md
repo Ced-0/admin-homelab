@@ -33,7 +33,7 @@ Cette page décrit la mise en place de la **sécurité réseau** dans le lab, in
 | VLAN 10 - Management  | Postes IT et RustDesk                              | Sécurisé, accès contrôlé aux serveurs |
 
 **Diagramme logique sécurité réseau :**  
-![Diagramme sécurité réseau](images/network-security.png)
+![Diagramme sécurité réseau](/admin-homelab/images/network-security.png)
 
 ---
 
@@ -76,10 +76,10 @@ Cette page décrit la mise en place de la **sécurité réseau** dans le lab, in
 
 ## 🖼️ Placeholder image / screenshot règles Firewall
 
-![PfSense Rules](images/pfsense-rules.png)
+![PfSense Rules](/admin-homelab/images/pfsense-rules.png)
 
 ---
 
 ## 📄 Placeholder PDF ou capture finale Firewall / DMZ
 
-[network-security.pdf](pdfs/network-security.pdf)
+[network-security.pdf](/admin-homelab/pdfs/network-security.pdf)

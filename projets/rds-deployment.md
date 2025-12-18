@@ -52,7 +52,7 @@ L’authentification est assurée par **Network Policy Server (NPS)** intégré 
 4. Broker → RD Session Host
 
 **Diagramme logique RDS :**  
-![Architecture RDS](/admin.homelab/assets/images/rds-architecture.png)
+![Architecture RDS](/admin-homelab/assets/images/rds-architecture.png)
 
 ---
 
@@ -93,7 +93,7 @@ OU=Serveurs
 - Désactivation de l’héritage des GPO génériques si nécessaire
 - Préparation des **groupes AD** (accès RDS, administration)
 
-![Préparation Active Directory RDS](/admin.homelab/assets/images/rds-ad-preparation.png)
+![Préparation Active Directory RDS](/admin-homelab/assets/images/rds-ad-preparation.png)
 
 ---
 
@@ -102,7 +102,7 @@ OU=Serveurs
 - Installation du rôle **Remote Desktop Session Host** sur **SRV-RDS01**
 - Tous les paramètres du Session Host sont **exclusivement gérés par GPO**
 
-![RD Session Host](/admin.homelab/assets/images/rds-session-host.png)
+![RD Session Host](/admin-homelab/assets/images/rds-session-host.png)
 
 ---
 
@@ -118,7 +118,7 @@ Toute la configuration est déclarative et centralisée.
 
 Aucune modification manuelle n’est conservée sur les hosts.
 
-![GPO Session Host](/admin.homelab/assets/images/rds-gpo-sessionhost.png)
+![GPO Session Host](/admin-homelab/assets/images/rds-gpo-sessionhost.png)
 
 ---
 
@@ -129,7 +129,7 @@ Aucune modification manuelle n’est conservée sur les hosts.
 - Gestion de **MA_collection RDS**
 - Attribution dynamique des sessions aux Session Hosts
 
-![RD Connection Broker](/admin.homelab/assets/images/rds-broker.png)
+![RD Connection Broker](/admin-homelab/assets/images/rds-broker.png)
 
 ---
 
@@ -141,7 +141,7 @@ Aucune modification manuelle n’est conservée sur les hosts.
 - Activation de **Network Policy Server (NPS)**
 - Activation de la **Network Level Authentication (NLA)**
 
-![RD Gateway](/admin.homelab/assets/images/rds-gateway.png)
+![RD Gateway](/admin-homelab/assets/images/rds-gateway.png)
 
 ---
 
@@ -152,7 +152,7 @@ Aucune modification manuelle n’est conservée sur les hosts.
 - Terminaison TLS via **PKI interne**
 - Redirection sécurisée vers RD Gateway
 
-![HAProxy Reverse Proxy RDS](/admin.homelab/assets/images/rds-haproxy.png)
+![HAProxy Reverse Proxy RDS](/admin-homelab/assets/images/rds-haproxy.png)
 
 ---
 
@@ -192,4 +192,4 @@ L’architecture est compatible avec des solutions MFA telles que :
 
 ## 📎 Ressources associées
 
-[rds-deployment.pdf](/admin.homelab/assets/pdfs/rds-deployment.pdf)
+[rds-deployment.pdf](/admin-homelab/assets/pdfs/rds-deployment.pdf)

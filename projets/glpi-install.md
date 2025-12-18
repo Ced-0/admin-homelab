@@ -41,7 +41,7 @@ Cette page décrit le déploiement de **GLPI** (Gestionnaire Libre de Parc Infor
 - Configuration du serveur web **Apache** et la base de données **MariaDB**  
 - Activer **HTTPS** pour sécuriser l’accès web (certificat signé par SRV-PKI01)   
 
-![Installation GLPI](/admin.homelab/assets/images/glpi-installation.png)
+![Installation GLPI](/admin-homelab/assets/images/glpi-installation.png)
 
 ---
 
@@ -51,7 +51,7 @@ Cette page décrit le déploiement de **GLPI** (Gestionnaire Libre de Parc Infor
 - Vérifier la **connexion des utilisateurs AD** à GLPI  
  
 
-![Intégration AD GLPI](/admin.homelab/assets/images/glpi-ad-integration.png)
+![Intégration AD GLPI](/admin-homelab/assets/images/glpi-ad-integration.png)
 
 ---
 
@@ -67,9 +67,9 @@ Cette page décrit le déploiement de **GLPI** (Gestionnaire Libre de Parc Infor
 - Créer un **ticket test** pour valider la réception par le helpdesk  
 - Contrôler la sécurisation **HTTPS** et les droits d’accès  
 
-![Vérification GLPI](/admin.homelab/assets/images/glpi-verification.png)
+![Vérification GLPI](/admin-homelab/assets/images/glpi-verification.png)
 
 ---
 
 ### 📄 Documentation complémentaire
-- PDF final du déploiement : [GLPI Installation](/admin.homelab/assets/pdfs/glpi-installation.pdf)
+- PDF final du déploiement : [GLPI Installation](/admin-homelab/assets/pdfs/glpi-installation.pdf)

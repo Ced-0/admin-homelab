@@ -30,7 +30,7 @@ Cette page décrit le déploiement d’un serveur **Xivo VoIP** dans le lab. L�
 | SRV-AD01        | Active Directory         | VLAN 20 192.168.20.10 |
 
 **Diagramme logique Xivo :**  
-![Diagramme Xivo VoIP](images/xivo-voip.png)
+![Diagramme Xivo VoIP](/admin-homelab/images/xivo-voip.png)
 
 ---
 
@@ -78,10 +78,10 @@ Cette page décrit le déploiement d’un serveur **Xivo VoIP** dans le lab. L�
 
 ## 🖼️ Placeholder image / screenshot Xivo
 
-![Xivo Dashboard](images/xivo-dashboard.png)
+![Xivo Dashboard](/admin-homelab/images/xivo-dashboard.png)
 
 ---
 
 ## 📄 Placeholder PDF ou capture finale Xivo
 
-[xivo-deployment.pdf](pdfs/xivo-deployment.pdf)
+[xivo-deployment.pdf](/admin-homelab/pdfs/xivo-deployment.pdf)

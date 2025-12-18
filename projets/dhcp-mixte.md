@@ -32,7 +32,7 @@ Cette page détaille la mise en place d’un **DHCP mixte**, combinant :
 | SRV-DHCP02 | DHCP secondaire ISC   | Debian 12 | 10.30.0.21 |
 
 **Diagramme logique DHCP :**  
-![Diagramme DHCP](/admin.homelab/assets/images/dhcp-architecture.png)
+![Diagramme DHCP](/admin-homelab/assets/images/dhcp-architecture.png)
 
 ---
 
@@ -46,7 +46,7 @@ Cette page détaille la mise en place d’un **DHCP mixte**, combinant :
 - Test de l’attribution d’IP sur des postes clients Windows et Linux  
 
 **Screenshot DHCP Windows :**  
-![DHCP Windows](/admin.homelab/assets/images/dhcp-windows.png)
+![DHCP Windows](/admin-homelab/assets/images/dhcp-windows.png)
 
 ---
 
@@ -58,7 +58,7 @@ Cette page détaille la mise en place d’un **DHCP mixte**, combinant :
 - Vérification que le **split-scope fonctionne correctement**, en lecture seule pour les IP non critiques  
 
 **Screenshot ISC DHCP :**  
-![DHCP ISC](/admin.homelab/assets/images/dhcp-isc.png)
+![DHCP ISC](/admin-homelab/assets/images/dhcp-isc.png)
 
 ---
 
@@ -71,5 +71,5 @@ Cette page détaille la mise en place d’un **DHCP mixte**, combinant :
 ---
 
 **Placeholder PDF ou capture finale DHCP :**  
-[DHCP Documentation PDF](/admin.homelab/assets/pdfs/dhcp-mixte.pdf)
+[DHCP Documentation PDF](/admin-homelab/assets/pdfs/dhcp-mixte.pdf)
 

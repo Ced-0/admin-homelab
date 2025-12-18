@@ -28,7 +28,7 @@ Cette page présente le déploiement d’un serveur **Wazuh** pour la supervisio
 | SRV-AD01        | Source de logs AD            | Windows   | VLAN Infra      |
 
 **Diagramme simplifié Wazuh :**  
-![Diagramme Wazuh](/admin.homelab/assets/images/wazuh-architecture.png)
+![Diagramme Wazuh](/admin-homelab/assets/images/wazuh-architecture.png)
 
 ---
 
@@ -40,7 +40,7 @@ Cette page présente le déploiement d’un serveur **Wazuh** pour la supervisio
 - Vérification de l’accès au dashboard  
 - Activer **HTTPS** pour sécuriser l’accès web (certificat signé par SRV-PKI01)   
 
-![Serveur Wazuh](/admin.homelab/assets/images/wazuh-dashboard.png)
+![Serveur Wazuh](/admin-homelab/assets/images/wazuh-dashboard.png)
 
 ---
 
@@ -49,7 +49,7 @@ Cette page présente le déploiement d’un serveur **Wazuh** pour la supervisio
 - Liaison des agents avec le **Wazuh Manager** via la clé d’enrôlement
 - Vérification de la **remontée des logs** dans le dashboard
 
-![Agents Wazuh](/admin.homelab/assets/images/wazuh-deploy.png)
+![Agents Wazuh](/admin-homelab/assets/images/wazuh-deploy.png)
 
 ---
 
@@ -68,6 +68,6 @@ Cette page présente le déploiement d’un serveur **Wazuh** pour la supervisio
 
 ## 📄 Documentation complémentaire
 
-- PDF du déploiement simplifié : [wazuh-deployment.pdf](/admin.homelab/assets/pdfs/wazuh-deployment.pdf)
+- PDF du déploiement simplifié : [wazuh-deployment.pdf](/admin-homelab/assets/pdfs/wazuh-deployment.pdf)
 
 ---

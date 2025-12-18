@@ -31,7 +31,7 @@ Cette page décrit l'installation et la configuration de **WAPT Community**, sol
 | Postes clients | Agents WAPT installés via GPO | VLAN 40 (Clients) |
 
 **Diagramme logique WAPT :**  
-![Diagramme WAPT](/admin.homelab/assets/images/wapt-dashboard.png)
+![Diagramme WAPT](/admin-homelab/assets/images/wapt-dashboard.png)
 
 ---
 
@@ -41,7 +41,7 @@ Cette page décrit l'installation et la configuration de **WAPT Community**, sol
 - Installer et configurer le serveur WAPT **SRV-WAPT01** en standalone  
 - Configurer le **SSL via certificat interne PKI** pour sécuriser les communications HTTPS  
 
-![Installation serveur WAPT](/admin.homelab/assets/images/wapt-server-install.png)
+![Installation serveur WAPT](/admin-homelab/assets/images/wapt-server-install.png)
 
 ---
 
@@ -50,7 +50,7 @@ Cette page décrit l'installation et la configuration de **WAPT Community**, sol
 - Explorer les menus : packages, agents, tableaux de bord et rapports  
 - Comprendre la gestion des paquets et la supervision centralisée  
 
-![Console WAPT Admin](/admin.homelab/assets/images/wapt-console.png)
+![Console WAPT Admin](/admin-homelab/assets/images/wapt-console.png)
 
 ---
 
@@ -58,7 +58,7 @@ Cette page décrit l'installation et la configuration de **WAPT Community**, sol
 - Installer l’agent sur les postes clients Windows via **GPO**   
 - Vérifier que les agents communiquent correctement avec le serveur et peuvent recevoir des paquets  
 
-![Installation agents WAPT](/admin.homelab/assets/images/wapt-agents.png)
+![Installation agents WAPT](/admin-homelab/assets/images/wapt-agents.png)
 
 ---
 
@@ -67,7 +67,7 @@ Cette page décrit l'installation et la configuration de **WAPT Community**, sol
 - Déployer les packages manuellement   
 - Tester le déploiement sur un poste pilote avant généralisation  
 
-![Création packages WAPT](/admin.homelab/assets/images/wapt-packages.png)
+![Création packages WAPT](/admin-homelab/assets/images/wapt-packages.png)
 
 > ⚠️ Les mises à jour Windows et logiciels doivent être gérées **manuellement** en créant des paquets correspondant aux KB ou versions à déployer.  
 > Les fonctionnalités de mise à jour automatique et de déploiement d’OS sont réservées à WAPT Enterprise.
@@ -79,7 +79,7 @@ Cette page décrit l'installation et la configuration de **WAPT Community**, sol
 - Vérifier que les packages se déploient comme prévu  
 - Consulter les rapports pour confirmer la réussite des installations et mises à jour manuelles  
 
-![Monitoring WAPT](/admin.homelab/assets/images/wapt-monitoring.png)
+![Monitoring WAPT](/admin-homelab/assets/images/wapt-monitoring.png)
 
 ---
 
@@ -91,7 +91,7 @@ Cette page décrit l'installation et la configuration de **WAPT Community**, sol
 ---
 
 ### 🔹 Documentation complémentaire
-[WAPT Documentation PDF](/admin.homelab/assets/pdfs/wapt-deployment.pdf)
+[WAPT Documentation PDF](/admin-homelab/assets/pdfs/wapt-deployment.pdf)
 
 ---
 
