@@ -30,7 +30,7 @@ Ce chapitre présente le déploiement complet de l’infrastructure Active Direc
 | SRV-PRINT01   | Print Server       | Win 2022  | 10.50.0.20 |
 
 **Diagramme réseau / architecture AD :**  
-![Diagramme réseau AD](/admin.homelab/assets/images/ad-network-diagram.png)
+![Diagramme réseau AD](/admin-homelab/assets/images/ad-network-diagram.png)
 
 ---
 
@@ -119,7 +119,7 @@ F:
 - Attribution des adresses IP selon le plan réseau (VLAN 20 pour les DC, VLAN 50 pour les serveurs de services)  
 - Vérification de la connectivité avec le firewall PfSense  
 
-![Déploiement des VM](/admin.homelab/assets/images/ad-vm-deployment.png)
+![Déploiement des VM](/admin-homelab/assets/images/ad-vm-deployment.png)
 
 ---
 
@@ -129,7 +129,7 @@ F:
 - Configuration du **DNS interne** pour `Homelab.local`  
 - Création des **Unités Organisationnelles (OU)** pour utilisateurs, groupes et ordinateurs  
 
-![Configuration ADDS](/admin.homelab/assets/images/ad-setup.png)
+![Configuration ADDS](/admin-homelab/assets/images/ad-setup.png)
 
 ---
 
@@ -138,7 +138,7 @@ F:
 - Ajout des utilisateurs et assignation aux groupes  
 - Vérification des droits d’accès sur les dossiers partagés  
 
-![Gestion utilisateurs et groupes](/admin.homelab/assets/images/ad-users-groups.png)
+![Gestion utilisateurs et groupes](/admin-homelab/assets/images/ad-users-groups.png)
 
 ---
 
@@ -147,7 +147,7 @@ F:
 - Création des **partages principaux** et application des ACL selon groupes AD  
 - Test d’accès aux partages depuis un poste client  
 
-![File Server](/admin.homelab/assets/images/ad-file-server.png)
+![File Server](/admin-homelab/assets/images/ad-file-server.png)
 
 ---
 
@@ -156,7 +156,7 @@ F:
 - Publication des imprimantes réseau par service ou département  
 - Test d’accès aux imprimantes depuis les postes clients  
 
-![Print Server](/admin.homelab/assets/images/ad-print-server.png)
+![Print Server](/admin-homelab/assets/images/ad-print-server.png)
 
 ---
 
@@ -165,7 +165,7 @@ F:
 - Utilisation d'un fond d'écran d'entreprise  
 - Déploiement des **partages et imprimantes** via GPO
 
-![GPO & Hardening](/admin.homelab/assets/images/ad-gpo.png)
+![GPO & Hardening](/admin-homelab/assets/images/ad-gpo.png)
 
 ---
 
@@ -179,7 +179,7 @@ F:
 
 ## 📄 Documentation complémentaire
 
-- PDF final du déploiement : [Domaine deploiement](/admin.homelab/assets/pdfs/ad-deployment.pdf)
+- PDF final du déploiement : [Domaine deploiement](/admin-homelab/assets/pdfs/ad-deployment.pdf)
 
 ---
 
